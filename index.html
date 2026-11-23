@@ -454,6 +454,49 @@ html[lang="ar"] .duration-price{font-family:'Cairo',sans-serif}
   border-bottom:1px solid var(--line-soft);
 }
 
+/* Expand for visa cards — only the clicked card opens; equal base size */
+.visa-card:not(.is-expanded) .visa-package-list .visa-package:nth-child(n+3),
+.visa-card:not(.is-expanded) .duration-list,
+.visa-card:not(.is-expanded) .package-note{
+  display: none;
+}
+.visa-expand-btn{
+  display: none;
+  margin-top: 14px;
+  width: 100%;
+  padding: 11px 16px;
+  background: transparent;
+  border: 1px solid var(--line-gold);
+  color: var(--gold-deep);
+  font-family: inherit;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  cursor: pointer;
+  transition: all .25s;
+  text-align: center;
+}
+.visa-expand-btn:hover{
+  background: rgba(212,162,76,.08);
+  border-color: var(--gold);
+}
+.visa-card.has-more .visa-expand-btn{
+  display: block;
+}
+.visa-card.is-expanded .visa-expand-btn{
+  border-color: var(--line-soft);
+  color: var(--text-soft);
+}
+.visa-card.is-expanded .visa-package-list .visa-package{
+  display: block;
+}
+.visa-card.is-expanded .duration-list{
+  display: flex;
+}
+.visa-card.is-expanded .package-note{
+  display: flex;
+}
+
 /* УСЛУГИ */
 .services{padding:100px 0;background:var(--cream-2);position:relative}
 .service-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:22px}
@@ -835,32 +878,36 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
   <section id="search" class="search-section">
     <div class="container">
       <div class="search-card reveal">
-        <h2 data-i18n="search.title">تحقق من أهليتك للحصول على التأشيرة</h2>
+        <h2 data-i18n="search.title">اعثر على التأشيرة المناسبة</h2>
         <p data-i18n="search.subtitle">
-          اختر نوع التأشيرة، جنسيتك، ومدة الإقامة — وسنراجع متطلباتك خلال دقائق.
+          اختر الوجهة وجنسيتك ونوع الباقة — وسنرشدك إلى أفضل خيار.
         </p>
         <div id="search-module-slot" class="search-module-slot">
           <form class="demo-search" onsubmit="return false;">
             <div class="field">
-              <label for="s-type" data-i18n="search.type">نوع التأشيرة</label>
-              <select id="s-type">
-                <option data-i18n="search.type1">سياحية</option>
-                <option data-i18n="search.type2">تجارية</option>
-                <option data-i18n="search.type3">إقامة</option>
-                <option data-i18n="search.type4">تمديد</option>
+              <label for="s-dest" data-i18n="search.dest">الوجهة</label>
+              <select id="s-dest">
+                <option data-i18n="search.dest1">الولايات المتحدة</option>
+                <option data-i18n="search.dest2">شنغن</option>
+                <option data-i18n="search.dest3">المملكة المتحدة</option>
+                <option data-i18n="search.dest4">اليابان</option>
+                <option data-i18n="search.dest5">أخرى</option>
               </select>
             </div>
             <div class="field">
               <label for="s-country" data-i18n="search.country">الجنسية</label>
-              <input type="text" id="s-country" data-i18n-placeholder="search.countryPh" placeholder="مثال: مصر">
+              <input type="text" id="s-country" data-i18n-placeholder="search.countryPh" placeholder="مثال: الهند">
             </div>
             <div class="field">
-              <label for="s-days" data-i18n="search.days">المدة</label>
-              <select id="s-days">
-                <option>14</option><option>30</option><option>60</option><option>90</option>
+              <label for="s-package" data-i18n="search.package">الباقة</label>
+              <select id="s-package">
+                <option data-i18n="search.pkg1">قياسي</option>
+                <option data-i18n="search.pkg2">أولوية</option>
+                <option data-i18n="search.pkg3">عاجل</option>
+                <option data-i18n="search.pkg4">VIP</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary" data-i18n="search.btn">تحقق الآن</button>
+            <button type="submit" class="btn btn-primary" data-i18n="search.btn">ابحث</button>
           </form>
         </div>
         <div class="search-note">
@@ -882,7 +929,7 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
 
       <div class="visa-grid">
 
-        <!-- США -->
+<!-- США -->
         <article class="visa-card reveal">
           <span class="visa-num" aria-hidden="true">01</span>
           <div class="visa-country-header">
@@ -936,9 +983,11 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
               </div>
             </div>
           </div>
+        
+          <button type="button" class="visa-expand-btn" data-i18n="common.expand" aria-expanded="false">تفاصيل</button>
         </article>
 
-        <!-- Шенген -->
+<!-- Шенген -->
         <article class="visa-card reveal">
           <span class="visa-num" aria-hidden="true">02</span>
           <div class="visa-country-header">
@@ -983,14 +1032,49 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
               </div>
             </div>
           </div>
+          
+          <button type="button" class="visa-expand-btn" data-i18n="common.expand" aria-expanded="false">تفاصيل</button>
           <div class="package-note">
             <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.schengen.processing">2-3 أسابيع</span></span>
           </div>
         </article>
 
-        <!-- Великобритания -->
+<!-- Япония -->
         <article class="visa-card reveal">
           <span class="visa-num" aria-hidden="true">03</span>
+          <div class="visa-country-header">
+            <span class="visa-country-flag" aria-hidden="true">🇯🇵</span>
+            <h3 data-i18n="visas.japan.title">تأشيرة اليابان</h3>
+          </div>
+          <div class="visa-package-list">
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--standard" data-i18n="visas.tiers.standard">قياسي</span>
+                <span class="package-price"><b>2,500</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.japan.p1.appt">خلال 1-2 شهر</span></span>
+                <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.japan.p1.processing">8-10 أيام عمل</span></span>
+              </div>
+            </div>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--urgent" data-i18n="visas.tiers.urgent">عاجل</span>
+                <span class="package-price"><b>3,500</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.japan.p2.appt">خلال 1-2 أسبوع</span></span>
+                <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.japan.p2.processing">8-10 أيام عمل</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="package-note" data-i18n="visas.japan.note1">💳 رسوم قنصلية 80 درهم للتأشيرة أحادية الدخول تُدفع بشكل منفصل في القنصلية أو سفارة اليابان.</div>
+          <div class="package-note" data-i18n="visas.japan.note2">💳 إضافي: يدفع العملاء رسوم المساعدة العاجلة ورسوم القنصلية 928 درهم مباشرة في مركز التأشيرات.</div>
+        </article>
+
+<!-- Великобритания -->
+        <article class="visa-card reveal">
+          <span class="visa-num" aria-hidden="true">04</span>
           <div class="visa-country-header">
             <span class="visa-country-flag" aria-hidden="true">🇬🇧</span>
             <h3 data-i18n="visas.uk.title">تأشيرة المملكة المتحدة</h3>
@@ -1081,39 +1165,8 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
               </div>
             </div>
           </div>
-        </article>
-
-        <!-- Япония -->
-        <article class="visa-card reveal">
-          <span class="visa-num" aria-hidden="true">04</span>
-          <div class="visa-country-header">
-            <span class="visa-country-flag" aria-hidden="true">🇯🇵</span>
-            <h3 data-i18n="visas.japan.title">تأشيرة اليابان</h3>
-          </div>
-          <div class="visa-package-list">
-            <div class="visa-package">
-              <div class="package-head">
-                <span class="tier tier--standard" data-i18n="visas.tiers.standard">قياسي</span>
-                <span class="package-price"><b>2,500</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
-              </div>
-              <div class="package-meta">
-                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.japan.p1.appt">خلال 1-2 شهر</span></span>
-                <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.japan.p1.processing">8-10 أيام عمل</span></span>
-              </div>
-            </div>
-            <div class="visa-package">
-              <div class="package-head">
-                <span class="tier tier--urgent" data-i18n="visas.tiers.urgent">عاجل</span>
-                <span class="package-price"><b>3,500</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
-              </div>
-              <div class="package-meta">
-                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.japan.p2.appt">خلال 1-2 أسبوع</span></span>
-                <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.japan.p2.processing">8-10 أيام عمل</span></span>
-              </div>
-            </div>
-          </div>
-          <div class="package-note" data-i18n="visas.japan.note1">💳 رسوم قنصلية 80 درهم للتأشيرة أحادية الدخول تُدفع بشكل منفصل في القنصلية أو سفارة اليابان.</div>
-          <div class="package-note" data-i18n="visas.japan.note2">💳 إضافي: يدفع العملاء رسوم المساعدة العاجلة ورسوم القنصلية 928 درهم مباشرة في مركز التأشيرات.</div>
+        
+          <button type="button" class="visa-expand-btn" data-i18n="common.expand" aria-expanded="false">تفاصيل</button>
         </article>
 
       </div>
@@ -1381,7 +1434,7 @@ const translations = {
   /* ================= العربية (по умолчанию) ================= */
   ar: {
     nav: { home:'الرئيسية', visas:'التأشيرات', services:'الخدمات', why:'لماذا نحن', reviews:'آراء العملاء', contacts:'اتصل بنا' },
-    common: { learn:'تفاصيل' },
+    common: { learn:'تفاصيل', expand:'تفاصيل', collapse:'إخفاء' },
     hero: {
       badge:'تأشيرات · سفر · للمقيمين في الإمارات',
       title:'تأشيرتك إلى العالم<br><em>من الإمارات</em>',
@@ -1491,7 +1544,7 @@ const translations = {
   /* ================= ENGLISH ================= */
   en: {
     nav: { home:'Home', visas:'Visas', services:'Services', why:'Why us', reviews:'Reviews', contacts:'Contacts' },
-    common: { learn:'Details' },
+    common: { learn:'Details', expand:'Details', collapse:'Show less' },
     hero: {
       badge:'Visa · Travel · for UAE residents',
       title:'Your visa to the world,<br><em>from the UAE</em>',
@@ -1601,7 +1654,7 @@ const translations = {
   /* ================= 中文 ================= */
   zh: {
     nav: { home:'首页', visas:'签证', services:'服务', why:'为什么选择我们', reviews:'客户评价', contacts:'联系我们' },
-    common: { learn:'详情' },
+    common: { learn:'详情', expand:'详情', collapse:'收起' },
     hero: {
       badge:'签证 · 旅行 · 阿联酋居民专享',
       title:'从阿联酋出发<br><em>畅游世界</em>',
@@ -1711,7 +1764,7 @@ const translations = {
   /* ================= РУССКИЙ ================= */
   ru: {
     nav: { home:'Главная', visas:'Визы', services:'Услуги', why:'Почему мы', reviews:'Отзывы', contacts:'Контакты' },
-    common: { learn:'Подробнее' },
+    common: { learn:'Подробнее', expand:'Подробнее', collapse:'Свернуть' },
     hero: {
       badge:'Визы · Путешествия · для резидентов ОАЭ',
       title:'Ваша виза в любую страну,<br><em>из ОАЭ</em>',
@@ -1839,6 +1892,15 @@ function setLanguage(lang){
     if (val !== undefined) el.setAttribute('placeholder', val);
   });
 
+  // Keep expand/collapse button labels in sync with current state
+  document.querySelectorAll('.visa-expand-btn').forEach(btn => {
+    const card = btn.closest('.visa-card');
+    const expanded = card && card.classList.contains('is-expanded');
+    const key = expanded ? 'common.collapse' : 'common.expand';
+    const val = getByPath(dict, key);
+    if (val) btn.textContent = val;
+  });
+
   document.querySelectorAll('.lang-btn').forEach(btn => {
     const active = btn.dataset.lang === lang;
     btn.classList.toggle('active', active);
@@ -1912,6 +1974,39 @@ function setLanguage(lang){
 })();
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+(function visaCardsExpand(){
+  const cards = document.querySelectorAll('.visa-card');
+  cards.forEach(card => {
+    const packages = card.querySelectorAll('.visa-package-list .visa-package');
+    const hasExtra = packages.length > 2
+      || card.querySelector('.duration-list')
+      || card.querySelector('.package-note');
+    if (!hasExtra) return;
+    card.classList.add('has-more');
+    let btn = card.querySelector('.visa-expand-btn');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'visa-expand-btn';
+      btn.setAttribute('data-i18n', 'common.expand');
+      btn.setAttribute('aria-expanded', 'false');
+      const lang = document.documentElement.lang || 'ar';
+      const dict = translations[lang] || translations.ar;
+      btn.textContent = getByPath(dict, 'common.expand') || 'Details';
+      card.appendChild(btn);
+    }
+    btn.addEventListener('click', () => {
+      const expanded = card.classList.toggle('is-expanded');
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      const lang = document.documentElement.lang || 'ar';
+      const dict = translations[lang] || translations.ar;
+      const key = expanded ? 'common.collapse' : 'common.expand';
+      const val = getByPath(dict, key);
+      if (val) btn.textContent = val;
+    });
+  });
+})();
 </script>
 
 </body>
