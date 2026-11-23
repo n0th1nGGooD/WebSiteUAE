@@ -3,16 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Urban Gulf · UAE Visa & Travel</title>
-<meta name="description" content="Urban Gulf — визовая поддержка ОАЭ: туристические, бизнес, residence. Туры по Эмиратам. AR · EN · ZH · RU.">
+<title>Urban Gulf · Визы и путешествия для резидентов ОАЭ</title>
+<meta name="description" content="Urban Gulf — визовая и туристическая помощь для резидентов ОАЭ: США, Шенген, Великобритания, Япония. AR · EN · ZH · RU.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
-/* ============================================================
-   ============================================================ */
 :root{
   --night:      #0E1A2B;
   --night-2:    #16263B;
@@ -34,11 +32,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:100px;
-}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
 
 body{
   font-family:'Cairo','Manrope',system-ui,sans-serif;
@@ -48,7 +42,6 @@ body{
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
 }
-
 html[lang="ar"] body{font-family:'Cairo',sans-serif;line-height:1.9}
 html[lang="ru"] body,
 html[lang="en"] body{font-family:'Manrope',sans-serif;line-height:1.7}
@@ -59,285 +52,105 @@ a{color:inherit;text-decoration:none}
 ul{list-style:none}
 button{font-family:inherit}
 
-.container{
-  width:min(1240px, 92%);
-  margin-inline:auto;
-}
+.container{width:min(1240px, 92%);margin-inline:auto}
 
-/* ============================================================
-   ТИПОГРАФИКА
-   ============================================================ */
 .eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  font-size:.72rem;
-  font-weight:700;
-  letter-spacing:.32em;
-  text-transform:uppercase;
-  color:var(--gold-deep);
-  margin-bottom:22px;
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.72rem;font-weight:700;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--gold-deep);margin-bottom:22px;
 }
-.eyebrow::before,
-.eyebrow::after{
-  content:"";
-  width:28px;
-  height:1px;
-  background:var(--gold);
-}
+.eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:var(--gold)}
 
-.section-head{
-  text-align:center;
-  max-width:720px;
-  margin:0 auto 64px;
-}
+.section-head{text-align:center;max-width:720px;margin:0 auto 64px}
 .section-head h2{
-  font-size:clamp(1.9rem, 4vw, 3rem);
-  line-height:1.15;
-  color:var(--text-dark);
-  font-weight:800;
-  letter-spacing:-.01em;
+  font-size:clamp(1.9rem, 4vw, 3rem);line-height:1.15;
+  color:var(--text-dark);font-weight:800;letter-spacing:-.01em;
 }
 html[lang="ar"] .section-head h2{font-weight:800;line-height:1.3}
-.section-head p{
-  color:var(--text-soft);
-  font-size:1.05rem;
-  margin-top:18px;
-  max-width:560px;
-  margin-inline:auto;
-}
+.section-head p{color:var(--text-soft);font-size:1.05rem;margin-top:18px;max-width:560px;margin-inline:auto}
 
-/* ============================================================
-   КНОПКИ
-   ============================================================ */
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-  padding:16px 34px;
-  font-weight:700;
-  font-size:.92rem;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  border:none;
-  cursor:pointer;
-  transition:all .3s ease;
-  white-space:nowrap;
-  position:relative;
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  padding:16px 34px;font-weight:700;font-size:.92rem;
+  letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;
+  transition:all .3s ease;white-space:nowrap;position:relative;
 }
+.btn-primary{background:var(--gold);color:var(--night);box-shadow:0 14px 34px -14px rgba(212,162,76,.7)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 20px 40px -16px rgba(212,162,76,.9)}
+.btn-ghost{background:transparent;color:var(--cream);border:1px solid var(--gold)}
+.btn-ghost:hover{background:var(--gold);color:var(--night)}
+.btn-dark{background:var(--night);color:var(--cream)}
+.btn-dark:hover{background:var(--night-3);transform:translateY(-2px)}
 
-.btn-primary{
-  background:var(--gold);
-  color:var(--night);
-  box-shadow:0 14px 34px -14px rgba(212,162,76,.7);
-}
-.btn-primary:hover{
-  background:var(--gold-light);
-  transform:translateY(-2px);
-  box-shadow:0 20px 40px -16px rgba(212,162,76,.9);
-}
-
-.btn-ghost{
-  background:transparent;
-  color:var(--cream);
-  border:1px solid var(--gold);
-}
-.btn-ghost:hover{
-  background:var(--gold);
-  color:var(--night);
-}
-
-.btn-dark{
-  background:var(--night);
-  color:var(--cream);
-}
-.btn-dark:hover{
-  background:var(--night-3);
-  transform:translateY(-2px);
-}
-
-/* ============================================================
-   ШАПКА
-   ============================================================ */
+/* ШАПКА */
 .site-header{
-  position:fixed;
-  inset-inline:0;
-  top:0;
-  z-index:200;
-  padding:20px 0;
+  position:fixed;inset-inline:0;top:0;z-index:200;padding:20px 0;
   transition:all .4s;
   background:linear-gradient(180deg, rgba(14,26,43,.85), rgba(14,26,43,0));
 }
 .site-header.scrolled{
-  background:rgba(14,26,43,.97);
-  backdrop-filter:blur(16px);
-  padding:12px 0;
+  background:rgba(14,26,43,.97);backdrop-filter:blur(16px);padding:12px 0;
   box-shadow:0 1px 0 var(--line-gold), 0 20px 40px -30px rgba(0,0,0,.6);
 }
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
 
-.header-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:24px;
-}
-
-/* --- МЕСТО ДЛЯ ФИРМЕННОГО ЛОГОТИПА --- */
-.logo{
-  display:inline-flex;
-  align-items:center;
-  gap:14px;
-  flex-shrink:0;
-}
+.logo{display:inline-flex;align-items:center;gap:14px;flex-shrink:0}
 .logo-mark{
-  width:48px;height:48px;
-  display:grid;place-items:center;
-  font-size:1.4rem;
-  color:var(--gold);
-  border:1px solid var(--gold);
-  border-radius:50%;
-  background:rgba(212,162,76,.08);
-  transition:all .3s;
+  width:48px;height:48px;display:grid;place-items:center;font-size:1.4rem;
+  color:var(--gold);border:1px solid var(--gold);border-radius:50%;
+  background:rgba(212,162,76,.08);transition:all .3s;
 }
-.logo:hover .logo-mark{
-  background:var(--gold);
-  color:var(--night);
-  transform:rotate(-8deg);
-}
+.logo:hover .logo-mark{background:var(--gold);color:var(--night);transform:rotate(-8deg)}
 .logo-name{
-  font-family:'Playfair Display',serif;
-  font-weight:700;
-  font-size:1.35rem;
-  letter-spacing:.08em;
-  color:var(--cream);
-  line-height:1;
+  font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;
+  letter-spacing:.08em;color:var(--cream);line-height:1;
 }
 .logo-name small{
-  display:block;
-  font-family:'Manrope',sans-serif;
-  font-size:.58rem;
-  font-weight:600;
-  letter-spacing:.34em;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-top:6px;
+  display:block;font-family:'Manrope',sans-serif;font-size:.58rem;
+  font-weight:600;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--gold);margin-top:6px;
 }
 .logo-img{height:48px;width:auto}
 
-/* Навигация */
-.main-nav{
-  display:flex;
-  align-items:center;
-  gap:2px;
-}
+.main-nav{display:flex;align-items:center;gap:2px}
 .nav-link{
-  position:relative;
-  padding:10px 16px;
-  font-size:.88rem;
-  font-weight:600;
-  letter-spacing:.04em;
-  color:rgba(245,238,227,.85);
-  transition:color .25s;
-  white-space:nowrap;
+  position:relative;padding:10px 16px;font-size:.88rem;font-weight:600;
+  letter-spacing:.04em;color:rgba(245,238,227,.85);transition:color .25s;white-space:nowrap;
 }
 .nav-link::after{
-  content:"";
-  position:absolute;
-  inset-inline:16px;
-  bottom:4px;
-  height:1px;
-  background:var(--gold);
-  transform:scaleX(0);
-  transition:transform .3s;
+  content:"";position:absolute;inset-inline:16px;bottom:4px;height:1px;
+  background:var(--gold);transform:scaleX(0);transition:transform .3s;
 }
 .nav-link:hover{color:var(--gold-light)}
 .nav-link:hover::after{transform:scaleX(1)}
 
-/* Правая группа */
-.header-right{
-  display:flex;
-  align-items:center;
-  gap:16px;
-  flex-shrink:0;
-}
-
-/* Языки */
-.lang-switcher{
-  display:flex;
-  align-items:center;
-  gap:2px;
-  padding:3px;
-  border:1px solid var(--line-gold);
-  border-radius:999px;
-}
+.header-right{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.lang-switcher{display:flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line-gold);border-radius:999px}
 .lang-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  padding:6px 11px;
-  border:none;
-  border-radius:999px;
-  background:transparent;
-  cursor:pointer;
-  font-size:.72rem;
-  font-weight:700;
-  letter-spacing:.08em;
-  color:rgba(245,238,227,.75);
-  transition:all .25s;
+  display:inline-flex;align-items:center;gap:7px;padding:6px 11px;
+  border:none;border-radius:999px;background:transparent;cursor:pointer;
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;
+  color:rgba(245,238,227,.75);transition:all .25s;
 }
 .lang-btn:hover{color:var(--cream)}
-.lang-btn.active{
-  background:var(--gold);
-  color:var(--night);
-}
-.flag{
-  width:20px;
-  height:14px;
-  border-radius:2px;
-  overflow:hidden;
-  box-shadow:0 0 0 1px rgba(0,0,0,.2);
-  flex-shrink:0;
-}
+.lang-btn.active{background:var(--gold);color:var(--night)}
+.flag{width:20px;height:14px;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.2);flex-shrink:0}
 .flag svg{width:100%;height:100%}
 
-/* Бургер */
-.burger{
-  display:none;
-  width:46px;height:46px;
-  border:1px solid var(--line-gold);
-  border-radius:50%;
-  background:transparent;
-  cursor:pointer;
-  padding:0;
-}
-.burger span{
-  display:block;
-  width:18px;height:1.5px;
-  margin:4px auto;
-  background:var(--gold);
-  transition:all .3s;
-}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--line-gold);border-radius:50%;background:transparent;cursor:pointer;padding:0}
+.burger span{display:block;width:18px;height:1.5px;margin:4px auto;background:var(--gold);transition:all .3s}
 .burger.open span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
 
-/* ============================================================
-   HERO — НОЧНОЙ ДУБАЙ
-   ============================================================ */
+/* HERO */
 .hero{
-  position:relative;
-  min-height:100vh;
-  padding:200px 0 160px;
-  overflow:hidden;
+  position:relative;min-height:100vh;padding:200px 0 160px;overflow:hidden;
   background:linear-gradient(180deg,#0A1524 0%,#0E1A2B 40%,#1A2F4A 80%,#2A4566 100%);
   color:var(--cream);
 }
-
-/* Звёзды */
 .stars-bg{
-  position:absolute;
-  inset:0;
+  position:absolute;inset:0;pointer-events:none;opacity:.9;
   background-image:
     radial-gradient(1px 1px at 12% 18%, rgba(245,238,227,.7), transparent),
     radial-gradient(1px 1px at 28% 42%, rgba(245,238,227,.5), transparent),
@@ -348,370 +161,288 @@ html[lang="ar"] .section-head h2{font-weight:800;line-height:1.3}
     radial-gradient(1px 1px at 34% 68%, rgba(245,238,227,.4), transparent),
     radial-gradient(1px 1px at 71% 72%, rgba(245,238,227,.5), transparent),
     radial-gradient(1px 1px at 18% 82%, rgba(212,162,76,.6), transparent);
-  pointer-events:none;
-  opacity:.9;
 }
-
-/* Луна */
 .moon{
-  position:absolute;
-  top:120px;
-  inset-inline-end:8%;
-  width:130px;height:130px;
+  position:absolute;top:120px;inset-inline-end:8%;width:130px;height:130px;
   border-radius:50%;
   background:radial-gradient(circle at 38% 34%, #FFF7D6, #EAC58A 55%, #D4A24C 100%);
-  box-shadow:
-    0 0 80px 30px rgba(212,162,76,.4),
-    0 0 160px 60px rgba(212,162,76,.15);
-  animation:moonFloat 9s ease-in-out infinite;
-  pointer-events:none;
+  box-shadow:0 0 80px 30px rgba(212,162,76,.4),0 0 160px 60px rgba(212,162,76,.15);
+  animation:moonFloat 9s ease-in-out infinite;pointer-events:none;
 }
-@keyframes moonFloat{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-12px)}
-}
+@keyframes moonFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
-/* Скайлайн Дубая — SVG */
-.skyline{
-  position:absolute;
-  inset-inline:0;
-  bottom:0;
-  width:100%;
-  height:auto;
-  max-height:52vh;
-  pointer-events:none;
-  z-index:1;
-}
+.skyline{position:absolute;inset-inline:0;bottom:0;width:100%;height:auto;max-height:52vh;pointer-events:none;z-index:1}
 
-/* Золотые «арабески» по углам */
-.arabesque{
-  position:absolute;
-  width:280px;
-  height:280px;
-  pointer-events:none;
-  opacity:.18;
-  z-index:2;
-}
-.arabesque-tl{top:80px; inset-inline-start:-40px}
-.arabesque-br{bottom:120px; inset-inline-end:-40px; transform:rotate(180deg)}
+.arabesque{position:absolute;width:280px;height:280px;pointer-events:none;opacity:.18;z-index:2}
+.arabesque-tl{top:80px;inset-inline-start:-40px}
+.arabesque-br{bottom:120px;inset-inline-end:-40px;transform:rotate(180deg)}
 
 .hero-inner{position:relative;z-index:5}
 .hero-content{max-width:740px}
 
 .hero-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
-  padding:10px 22px;
-  border:1px solid var(--gold);
-  border-radius:999px;
-  background:rgba(212,162,76,.10);
-  color:var(--gold-light);
-  font-size:.78rem;
-  font-weight:700;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  margin-bottom:32px;
+  display:inline-flex;align-items:center;gap:12px;padding:10px 22px;
+  border:1px solid var(--gold);border-radius:999px;background:rgba(212,162,76,.10);
+  color:var(--gold-light);font-size:.78rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:32px;
 }
-.hero-badge::before{
-  content:"";
-  width:6px;height:6px;
-  border-radius:50%;
-  background:var(--gold);
-  box-shadow:0 0 0 4px rgba(212,162,76,.2);
-}
+.hero-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(212,162,76,.2)}
 
 .hero h1{
   font-family:'Playfair Display','Cairo',serif;
-  font-size:clamp(2.4rem, 6vw, 4.6rem);
-  line-height:1.05;
-  font-weight:700;
-  letter-spacing:-.02em;
-  color:var(--cream);
+  font-size:clamp(2.4rem, 6vw, 4.6rem);line-height:1.05;font-weight:700;
+  letter-spacing:-.02em;color:var(--cream);
 }
-html[lang="ar"] .hero h1{
-  font-family:'Cairo',sans-serif;
-  line-height:1.25;
-  letter-spacing:0;
-}
-.hero h1 em{
-  font-style:normal;
-  color:var(--gold);
-  font-weight:700;
-}
+html[lang="ar"] .hero h1{font-family:'Cairo',sans-serif;line-height:1.25;letter-spacing:0}
+.hero h1 em{font-style:normal;color:var(--gold);font-weight:700}
 
 .hero-sub{
-  margin-top:26px;
-  font-size:clamp(1rem, 1.4vw, 1.15rem);
-  max-width:560px;
-  color:rgba(245,238,227,.78);
-  line-height:1.75;
+  margin-top:26px;font-size:clamp(1rem, 1.4vw, 1.15rem);
+  max-width:560px;color:rgba(245,238,227,.78);line-height:1.75;
 }
 
-.hero-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:16px;
-  margin-top:44px;
-}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:44px}
 
 .hero-stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:0;
-  margin-top:70px;
-  max-width:640px;
-  border-top:1px solid var(--line-gold);
-  padding-top:32px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  margin-top:70px;max-width:640px;
+  border-top:1px solid var(--line-gold);padding-top:32px;
 }
-.stat{
-  padding-inline-end:28px;
-  border-inline-end:1px solid var(--line-gold);
-}
-.stat:last-child{
-  border-inline-end:none;
-  padding-inline-end:0;
-  padding-inline-start:28px;
-}
+.stat{padding-inline-end:28px;border-inline-end:1px solid var(--line-gold)}
+.stat:last-child{border-inline-end:none;padding-inline-end:0;padding-inline-start:28px}
 .stat:not(:first-child){padding-inline-start:28px}
 .stat b{
-  display:block;
-  font-family:'Playfair Display',serif;
-  font-size:2rem;
-  font-weight:700;
-  color:var(--gold);
-  line-height:1;
-  letter-spacing:-.01em;
+  display:block;font-family:'Playfair Display',serif;font-size:2rem;
+  font-weight:700;color:var(--gold);line-height:1;letter-spacing:-.01em;
 }
 html[lang="ar"] .stat b{font-family:'Cairo',sans-serif}
 .stat span{
-  display:block;
-  margin-top:8px;
-  font-size:.76rem;
-  font-weight:600;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:rgba(245,238,227,.6);
+  display:block;margin-top:8px;font-size:.76rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:rgba(245,238,227,.6);
 }
 
-/* ============================================================
-   ПОИСКОВИК
-   ============================================================ */
-.search-section{
-  position:relative;
-  z-index:10;
-  margin-top:-80px;
-  padding-bottom:20px;
-}
-
+/* ПОИСКОВИК */
+.search-section{position:relative;z-index:10;margin-top:-80px;padding-bottom:20px}
 .search-card{
-  background:var(--cream);
-  padding:52px;
-  box-shadow:var(--shadow-deep);
-  position:relative;
-  border-top:3px solid var(--gold);
+  background:var(--cream);padding:52px;box-shadow:var(--shadow-deep);
+  position:relative;border-top:3px solid var(--gold);
 }
-.search-card::before,
-.search-card::after{
-  content:"";
-  position:absolute;
-  width:20px;height:20px;
-  border:2px solid var(--gold);
-  top:12px;
+.search-card::before,.search-card::after{
+  content:"";position:absolute;width:20px;height:20px;border:2px solid var(--gold);top:12px;
 }
 .search-card::before{inset-inline-start:12px;border-inline-end:none;border-bottom:none}
 .search-card::after{inset-inline-end:12px;border-inline-start:none;border-bottom:none}
 
 .search-card h2{
   font-family:'Playfair Display','Cairo',serif;
-  font-size:clamp(1.5rem, 2.8vw, 2.1rem);
-  color:var(--text-dark);
-  font-weight:700;
-  letter-spacing:-.01em;
+  font-size:clamp(1.5rem, 2.8vw, 2.1rem);color:var(--text-dark);
+  font-weight:700;letter-spacing:-.01em;
 }
 html[lang="ar"] .search-card h2{font-family:'Cairo',sans-serif}
-.search-card > p{
-  color:var(--text-soft);
-  margin-top:10px;
-  font-size:.96rem;
-  max-width:640px;
-}
+.search-card > p{color:var(--text-soft);margin-top:10px;font-size:.96rem;max-width:640px}
 
 .search-module-slot{
-  margin-top:32px;
-  padding:28px;
-  background:rgba(212,162,76,.06);
-  border:1px dashed var(--line-gold);
+  margin-top:32px;padding:28px;
+  background:rgba(212,162,76,.06);border:1px dashed var(--line-gold);
 }
 
-.demo-search{
-  display:grid;
-  grid-template-columns:1.3fr 1fr .85fr auto;
-  gap:16px;
-  align-items:end;
-}
+.demo-search{display:grid;grid-template-columns:1.3fr 1fr .85fr auto;gap:16px;align-items:end}
 .field{display:flex;flex-direction:column;gap:8px;min-width:0}
-.field label{
-  font-size:.7rem;
-  font-weight:700;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--text-gold);
+.field label{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--text-gold)}
+.field input,.field select{
+  width:100%;padding:14px 16px;border:none;border-bottom:1.5px solid var(--line-soft);
+  background:transparent;font-family:inherit;font-size:.96rem;color:var(--text-dark);
+  transition:border-color .25s;border-radius:0;
 }
-.field input,
-.field select{
-  width:100%;
-  padding:14px 16px;
-  border:none;
-  border-bottom:1.5px solid var(--line-soft);
-  background:transparent;
-  font-family:inherit;
-  font-size:.96rem;
-  color:var(--text-dark);
-  transition:border-color .25s;
-  border-radius:0;
-}
-.field input:focus,
-.field select:focus{
-  outline:none;
-  border-bottom-color:var(--gold);
-}
+.field input:focus,.field select:focus{outline:none;border-bottom-color:var(--gold)}
 .field input::placeholder{color:#B8A98E}
-
 .demo-search .btn{height:50px;padding-inline:26px}
 
-.search-note{
-  margin-top:18px;
-  font-size:.78rem;
-  color:var(--text-soft);
-  display:flex;
-  align-items:flex-start;
-  gap:8px;
-}
+.search-note{margin-top:18px;font-size:.78rem;color:var(--text-soft);display:flex;align-items:flex-start;gap:8px}
 .search-note::before{content:"◇";color:var(--gold);font-size:.9rem}
 
 /* ============================================================
-   ВИТРИНА ВИЗ
+   ВИТРИНА ВИЗ — ПАКЕТЫ
    ============================================================ */
-.visas{
-  padding:100px 0;
-  background:var(--cream);
-  position:relative;
-}
+.visas{padding:100px 0;background:var(--cream);position:relative}
 
-.visa-grid{
+.visas .visa-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-  gap:24px;
+  grid-template-columns:repeat(auto-fit, minmax(460px, 1fr));
+  gap:26px;
+  align-items:start;
 }
 
 .visa-card{
   position:relative;
   background:#fff;
-  padding:40px 34px 32px;
+  padding:34px 30px 28px;
   border:1px solid var(--line-soft);
   transition:all .4s cubic-bezier(.2,.8,.3,1);
   display:flex;
   flex-direction:column;
-  overflow:hidden;
 }
-/* Арка сверху — отсылка к арабской архитектуре */
 .visa-card::before{
   content:"";
   position:absolute;
-  inset-inline:0;
-  top:0;
-  height:6px;
+  inset-inline:0;top:0;height:3px;
   background:linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
-  opacity:0;
-  transition:opacity .35s;
+  opacity:0;transition:opacity .35s;
 }
 .visa-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 30px 60px -30px rgba(26,20,16,.35);
   border-color:var(--gold);
+  box-shadow:0 30px 60px -30px rgba(26,20,16,.35);
+  transform:translateY(-4px);
 }
 .visa-card:hover::before{opacity:1}
 
 .visa-num{
   position:absolute;
-  top:22px;
-  inset-inline-end:26px;
+  top:18px;inset-inline-end:22px;
   font-family:'Playfair Display',serif;
-  font-size:3.2rem;
-  font-weight:700;
+  font-size:2.6rem;font-weight:700;
   color:rgba(212,162,76,.10);
+  line-height:1;pointer-events:none;
+}
+
+/* Заголовок страны */
+.visa-country-header{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--line-soft);
+  margin-bottom:6px;
+}
+.visa-country-flag{
+  font-size:2.1rem;
   line-height:1;
-  pointer-events:none;
+  flex-shrink:0;
 }
-
-.visa-icon{
-  width:56px;height:56px;
-  display:grid;place-items:center;
-  font-size:1.7rem;
-  border:1px solid var(--gold);
-  border-radius:50%;
-  color:var(--gold-deep);
-  margin-bottom:24px;
-}
-
-.visa-card h3{
+.visa-country-header h3{
   font-family:'Playfair Display','Cairo',serif;
   font-size:1.32rem;
   font-weight:700;
   color:var(--text-dark);
   letter-spacing:-.01em;
-  margin-bottom:10px;
+  line-height:1.2;
+  margin:0;
 }
-html[lang="ar"] .visa-card h3{font-family:'Cairo',sans-serif}
+html[lang="ar"] .visa-country-header h3{font-family:'Cairo',sans-serif}
 
-.visa-card p{
-  color:var(--text-soft);
-  font-size:.93rem;
-  flex-grow:1;
-  line-height:1.7;
-}
+/* Список пакетов */
+.visa-package-list{display:flex;flex-direction:column}
 
-.visa-meta{
-  display:flex;
-  gap:24px;
+.visa-package{
   padding:16px 0;
-  margin-top:20px;
-  border-top:1px solid var(--line-soft);
   border-bottom:1px solid var(--line-soft);
 }
-.visa-meta > div{flex:1}
-.visa-meta span{
-  display:block;
-  font-size:.66rem;
-  font-weight:700;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--text-gold);
-  margin-bottom:4px;
-}
-.visa-meta b{
-  font-size:.92rem;
-  font-weight:700;
-  color:var(--text-dark);
+.visa-package:last-child{border-bottom:none}
+
+.package-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:7px;
 }
 
-.link-arrow{
+.tier{
   display:inline-flex;
   align-items:center;
-  gap:10px;
-  margin-top:20px;
-  font-size:.82rem;
-  font-weight:700;
-  letter-spacing:.1em;
+  padding:4px 11px;
+  border-radius:999px;
+  font-size:.66rem;
+  font-weight:800;
+  letter-spacing:.09em;
   text-transform:uppercase;
-  color:var(--gold-deep);
-  transition:gap .3s, color .3s;
+  white-space:nowrap;
 }
-.link-arrow:hover{gap:16px;color:var(--text-dark)}
-.arrow{display:inline-block;transition:transform .3s}
-html[dir="rtl"] .arrow{transform:scaleX(-1)}
-html[dir="rtl"] .link-arrow:hover .arrow{transform:scaleX(-1) translateX(6px)}
+.tier--standard{background:#F0EDE6;color:#5C544A}
+.tier--priority{background:rgba(15,92,92,.12);color:var(--emerald)}
+.tier--urgent{background:rgba(255,90,60,.13);color:#C93B1E}
+.tier--premium{background:rgba(212,162,76,.16);color:var(--gold-deep)}
+.tier--vip{background:linear-gradient(135deg,#1A1410,#3A2A1A);color:var(--gold-light)}
+.tier--super{background:linear-gradient(135deg,var(--emerald),var(--emerald-d));color:var(--gold-light)}
+
+.package-price{
+  font-size:.82rem;
+  color:var(--text-soft);
+  font-weight:500;
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:baseline;
+  gap:5px;
+}
+.package-price b{
+  font-family:'Playfair Display','Cairo',serif;
+  font-size:1.06rem;
+  font-weight:700;
+  color:var(--gold-deep);
+}
+html[lang="ar"] .package-price b{font-family:'Cairo',sans-serif}
+.package-price small{font-size:.72rem;color:var(--text-soft);font-weight:500}
+
+.package-type-note{
+  font-size:.72rem;
+  color:var(--text-soft);
+  font-weight:500;
+  letter-spacing:.02em;
+}
+
+.package-meta{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  font-size:.8rem;
+  color:var(--text-soft);
+  line-height:1.55;
+}
+.package-meta > span{
+  display:inline-flex;
+  align-items:flex-start;
+  gap:6px;
+}
+
+.duration-list{
+  margin-top:10px;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.duration-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 12px;
+  background:rgba(212,162,76,.05);
+  font-size:.85rem;
+  transition:background .25s;
+}
+.duration-row:hover{background:rgba(212,162,76,.10)}
+.duration-label{font-weight:600;color:var(--text-dark)}
+.duration-price{
+  font-family:'Playfair Display','Cairo',serif;
+  font-weight:700;
+  color:var(--gold-deep);
+  font-size:.9rem;
+  white-space:nowrap;
+}
+html[lang="ar"] .duration-price{font-family:'Cairo',sans-serif}
+
+.package-note{
+  margin-top:12px;
+  font-size:.78rem;
+  color:var(--text-gold);
+  background:rgba(212,162,76,.06);
+  padding:9px 13px;
+  border-inline-start:2px solid var(--gold);
+  line-height:1.6;
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+}
 
 .visa-note{
   margin-top:40px;
@@ -723,74 +454,29 @@ html[dir="rtl"] .link-arrow:hover .arrow{transform:scaleX(-1) translateX(6px)}
   border-bottom:1px solid var(--line-soft);
 }
 
-/* ============================================================
-   УСЛУГИ (туры по ОАЭ)
-   ============================================================ */
-.services{
-  padding:100px 0;
-  background:var(--cream-2);
-  position:relative;
-}
-
-.service-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-  gap:22px;
-}
-
+/* УСЛУГИ */
+.services{padding:100px 0;background:var(--cream-2);position:relative}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:22px}
 .service-card{
-  background:#fff;
-  padding:36px 30px 30px;
-  border:1px solid transparent;
-  transition:all .35s;
-  display:flex;
-  flex-direction:column;
+  background:#fff;padding:36px 30px 30px;border:1px solid transparent;
+  transition:all .35s;display:flex;flex-direction:column;
 }
-.service-card:hover{
-  border-color:var(--gold);
-  transform:translateY(-6px);
-  box-shadow:0 24px 50px -28px rgba(26,20,16,.3);
-}
-
+.service-card:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 24px 50px -28px rgba(26,20,16,.3)}
 .service-icon{
-  width:60px;height:60px;
-  display:grid;place-items:center;
-  font-size:1.9rem;
-  margin-bottom:22px;
-  border-inline-start:3px solid var(--gold);
-  padding-inline-start:18px;
+  width:60px;height:60px;display:grid;place-items:center;font-size:1.9rem;
+  margin-bottom:22px;border-inline-start:3px solid var(--gold);padding-inline-start:18px;
 }
-
 .service-card h3{
-  font-family:'Playfair Display','Cairo',serif;
-  font-size:1.18rem;
-  font-weight:700;
-  color:var(--text-dark);
-  margin-bottom:12px;
+  font-family:'Playfair Display','Cairo',serif;font-size:1.18rem;
+  font-weight:700;color:var(--text-dark);margin-bottom:12px;
 }
 html[lang="ar"] .service-card h3{font-family:'Cairo',sans-serif}
+.service-card p{color:var(--text-soft);font-size:.93rem;flex-grow:1}
 
-.service-card p{
-  color:var(--text-soft);
-  font-size:.93rem;
-  flex-grow:1;
-}
-
-/* ============================================================
-   ПОЧЕМУ МЫ
-   ============================================================ */
-.why{
-  padding:110px 0;
-  background:var(--night);
-  color:var(--cream);
-  position:relative;
-  overflow:hidden;
-}
-
+/* ПОЧЕМУ МЫ */
+.why{padding:110px 0;background:var(--night);color:var(--cream);position:relative;overflow:hidden}
 .why::before{
-  content:"";
-  position:absolute;
-  inset:0;
+  content:"";position:absolute;inset:0;pointer-events:none;
   background-image:
     radial-gradient(1px 1px at 8% 24%, rgba(212,162,76,.6), transparent),
     radial-gradient(1px 1px at 22% 68%, rgba(212,162,76,.4), transparent),
@@ -798,322 +484,145 @@ html[lang="ar"] .service-card h3{font-family:'Cairo',sans-serif}
     radial-gradient(1px 1px at 58% 82%, rgba(212,162,76,.5), transparent),
     radial-gradient(1px 1px at 76% 32%, rgba(245,238,227,.4), transparent),
     radial-gradient(1.5px 1.5px at 88% 68%, rgba(212,162,76,.6), transparent);
-  pointer-events:none;
 }
-
 .why .section-head h2{color:var(--cream)}
 .why .section-head p{color:rgba(245,238,227,.68)}
 .why .section-head .eyebrow{color:var(--gold)}
 
 .why-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-  gap:0;
-  position:relative;
-  z-index:2;
-  border-top:1px solid var(--line-gold);
+  display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:0;position:relative;z-index:2;border-top:1px solid var(--line-gold);
 }
-
 .why-card{
-  padding:44px 34px;
-  border-inline-end:1px solid var(--line-gold);
-  border-bottom:1px solid var(--line-gold);
-  transition:background .35s;
+  padding:44px 34px;border-inline-end:1px solid var(--line-gold);
+  border-bottom:1px solid var(--line-gold);transition:background .35s;
 }
 .why-card:hover{background:rgba(212,162,76,.06)}
-
 .why-num{
-  font-family:'Playfair Display',serif;
-  font-size:.85rem;
-  font-weight:700;
-  letter-spacing:.18em;
-  color:var(--gold);
-  margin-bottom:16px;
-  display:block;
+  font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;
+  letter-spacing:.18em;color:var(--gold);margin-bottom:16px;display:block;
 }
-
 .why-card h3{
-  font-family:'Playfair Display','Cairo',serif;
-  font-size:1.15rem;
-  font-weight:700;
-  color:var(--cream);
-  margin-bottom:12px;
-  letter-spacing:-.01em;
+  font-family:'Playfair Display','Cairo',serif;font-size:1.15rem;
+  font-weight:700;color:var(--cream);margin-bottom:12px;letter-spacing:-.01em;
 }
 html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
+.why-card p{font-size:.9rem;color:rgba(245,238,227,.68);line-height:1.75}
 
-.why-card p{
-  font-size:.9rem;
-  color:rgba(245,238,227,.68);
-  line-height:1.75;
-}
-
-/* ============================================================
-   ОТЗЫВЫ
-   ============================================================ */
+/* ОТЗЫВЫ */
 .reviews{padding:100px 0}
-
-.review-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-  gap:24px;
-}
-
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:24px}
 .review-card{
-  background:#fff;
-  padding:44px 36px 32px;
-  border:1px solid var(--line-soft);
-  position:relative;
-  transition:all .35s;
-  display:flex;
-  flex-direction:column;
+  background:#fff;padding:44px 36px 32px;border:1px solid var(--line-soft);
+  position:relative;transition:all .35s;display:flex;flex-direction:column;
 }
-.review-card:hover{
-  border-color:var(--gold);
-  box-shadow:0 30px 60px -32px rgba(26,20,16,.3);
-}
-
+.review-card:hover{border-color:var(--gold);box-shadow:0 30px 60px -32px rgba(26,20,16,.3)}
 .review-mark{
-  position:absolute;
-  top:16px;
-  inset-inline-end:28px;
-  font-family:'Playfair Display',serif;
-  font-size:5rem;
-  line-height:1;
-  color:var(--gold);
-  opacity:.22;
+  position:absolute;top:16px;inset-inline-end:28px;
+  font-family:'Playfair Display',serif;font-size:5rem;line-height:1;
+  color:var(--gold);opacity:.22;
 }
-
-.stars{
-  color:var(--gold);
-  letter-spacing:4px;
-  font-size:.85rem;
-  margin-bottom:20px;
-}
-
-.review-card p{
-  color:var(--text-dark);
-  font-size:.98rem;
-  flex-grow:1;
-  line-height:1.75;
-  font-style:italic;
-}
-
+.stars{color:var(--gold);letter-spacing:4px;font-size:.85rem;margin-bottom:20px}
+.review-card p{color:var(--text-dark);font-size:.98rem;flex-grow:1;line-height:1.75;font-style:italic}
 .review-author{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  margin-top:26px;
-  padding-top:22px;
+  display:flex;align-items:center;gap:14px;margin-top:26px;padding-top:22px;
   border-top:1px solid var(--line-soft);
 }
 .avatar{
-  width:44px;height:44px;
-  border-radius:50%;
-  display:grid;place-items:center;
-  font-weight:700;
-  color:var(--night);
-  background:var(--gold);
-  font-size:.95rem;
-  flex-shrink:0;
+  width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  font-weight:700;color:var(--night);background:var(--gold);font-size:.95rem;flex-shrink:0;
 }
-.review-author b{
-  font-size:.88rem;
-  color:var(--text-dark);
-  font-weight:700;
-  letter-spacing:.02em;
-}
+.review-author b{font-size:.88rem;color:var(--text-dark);font-weight:700;letter-spacing:.02em}
 
-/* ============================================================
-   КОНТАКТЫ
-   ============================================================ */
-.contacts{
-  padding:110px 0;
-  background:var(--night);
-  color:var(--cream);
-  position:relative;
-  overflow:hidden;
-}
+/* КОНТАКТЫ */
+.contacts{padding:110px 0;background:var(--night);color:var(--cream);position:relative;overflow:hidden}
 .contacts::before{
-  content:"";
-  position:absolute;
-  inset:0;
+  content:"";position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(circle at 15% 20%, rgba(212,162,76,.10), transparent 55%),
              radial-gradient(circle at 85% 80%, rgba(15,92,92,.20), transparent 55%);
-  pointer-events:none;
 }
-
 .contacts .section-head h2{color:var(--cream)}
 .contacts .section-head p{color:rgba(245,238,227,.7)}
 .contacts .section-head .eyebrow{color:var(--gold)}
 
 .contacts-grid{
-  display:grid;
-  grid-template-columns:1fr 1.1fr;
-  gap:60px;
-  align-items:start;
-  position:relative;
-  z-index:2;
+  display:grid;grid-template-columns:1fr 1.1fr;gap:60px;
+  align-items:start;position:relative;z-index:2;
 }
 
 .contact-list{display:flex;flex-direction:column;gap:2px}
-
 .contact-item{
-  display:flex;
-  gap:20px;
-  align-items:flex-start;
-  padding:24px 0;
-  border-bottom:1px solid var(--line-gold);
-  transition:padding .3s;
+  display:flex;gap:20px;align-items:flex-start;padding:24px 0;
+  border-bottom:1px solid var(--line-gold);transition:padding .3s;
 }
 .contact-item:hover{padding-inline-start:10px}
-
 .ci{
-  width:48px;height:48px;
-  border:1px solid var(--gold);
-  border-radius:50%;
-  display:grid;place-items:center;
-  font-size:1.1rem;
-  color:var(--gold);
-  flex-shrink:0;
+  width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;
+  display:grid;place-items:center;font-size:1.1rem;color:var(--gold);flex-shrink:0;
 }
 .contact-item b{
-  display:block;
-  font-size:.68rem;
-  font-weight:700;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:4px;
+  display:block;font-size:.68rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:4px;
 }
-.contact-item span,
-.contact-item a{
-  font-size:1rem;
-  color:var(--cream);
-  font-weight:500;
-}
+.contact-item span,.contact-item a{font-size:1rem;color:var(--cream);font-weight:500}
 .contact-item a:hover{color:var(--gold-light)}
 
-/* Форма */
 .contact-form{
-  background:rgba(245,238,227,.04);
-  border:1px solid var(--line-gold);
-  padding:44px 40px;
-  position:relative;
+  background:rgba(245,238,227,.04);border:1px solid var(--line-gold);
+  padding:44px 40px;position:relative;
 }
 .contact-form::before{
-  content:"";
-  position:absolute;
-  top:-1px;inset-inline-start:36px;
-  width:60px;height:3px;
-  background:var(--gold);
+  content:"";position:absolute;top:-1px;inset-inline-start:36px;
+  width:60px;height:3px;background:var(--gold);
 }
 .contact-form .row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .contact-form .field{margin-bottom:20px}
-.contact-form .field label{
-  color:var(--gold);
-  font-size:.68rem;
-  letter-spacing:.18em;
+.contact-form .field label{color:var(--gold);font-size:.68rem;letter-spacing:.18em}
+.contact-form .field input,.contact-form textarea{
+  width:100%;padding:14px 0;border:none;border-bottom:1px solid var(--line-gold);
+  background:transparent;color:var(--cream);font-family:inherit;font-size:.96rem;
+  border-radius:0;transition:border-color .25s;
 }
-.contact-form .field input,
-.contact-form textarea{
-  width:100%;
-  padding:14px 0;
-  border:none;
-  border-bottom:1px solid var(--line-gold);
-  background:transparent;
-  color:var(--cream);
-  font-family:inherit;
-  font-size:.96rem;
-  border-radius:0;
-  transition:border-color .25s;
-}
-.contact-form .field input::placeholder,
-.contact-form textarea::placeholder{
-  color:rgba(245,238,227,.35);
-}
-.contact-form .field input:focus,
-.contact-form textarea:focus{
-  outline:none;
-  border-bottom-color:var(--gold);
-}
-.contact-form textarea{
-  min-height:110px;
-  resize:vertical;
-}
+.contact-form .field input::placeholder,.contact-form textarea::placeholder{color:rgba(245,238,227,.35)}
+.contact-form .field input:focus,.contact-form textarea:focus{outline:none;border-bottom-color:var(--gold)}
+.contact-form textarea{min-height:110px;resize:vertical}
 .contact-form .btn{width:100%;margin-top:12px}
 
-/* ============================================================
-   ПОДВАЛ
-   ============================================================ */
+/* ПОДВАЛ */
 .site-footer{
-  background:#07101D;
-  padding:70px 0 0;
-  color:rgba(245,238,227,.7);
+  background:#07101D;padding:70px 0 0;color:rgba(245,238,227,.7);
   border-top:1px solid var(--line-gold);
 }
 .footer-grid{
-  display:grid;
-  grid-template-columns:1.6fr 1fr 1.2fr 1fr;
-  gap:48px;
+  display:grid;grid-template-columns:1.6fr 1fr 1.2fr 1fr;gap:48px;
   padding-bottom:52px;
 }
-.footer-brand p{
-  margin-top:22px;
-  font-size:.92rem;
-  max-width:300px;
-  color:rgba(245,238,227,.55);
-}
+.footer-brand p{margin-top:22px;font-size:.92rem;max-width:300px;color:rgba(245,238,227,.55)}
 .footer-col h4{
-  color:var(--gold);
-  font-size:.72rem;
-  font-weight:700;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  margin-bottom:22px;
+  color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;margin-bottom:22px;
 }
 .footer-col ul{display:flex;flex-direction:column;gap:12px}
-.footer-col a{
-  font-size:.93rem;
-  color:rgba(245,238,227,.65);
-  transition:color .25s;
-}
+.footer-col a{font-size:.93rem;color:rgba(245,238,227,.65);transition:color .25s}
 .footer-col a:hover{color:var(--gold)}
 
 .socials{display:flex;gap:10px;flex-wrap:wrap}
 .socials a{
-  width:42px;height:42px;
-  border-radius:50%;
-  display:grid;place-items:center;
-  border:1px solid var(--line-gold);
-  color:var(--gold);
-  transition:all .25s;
+  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid var(--line-gold);color:var(--gold);transition:all .25s;
 }
-.socials a:hover{
-  background:var(--gold);
-  color:var(--night);
-  transform:translateY(-3px);
-}
+.socials a:hover{background:var(--gold);color:var(--night);transform:translateY(-3px)}
 .socials svg{width:18px;height:18px}
 
 .footer-bottom{
-  border-top:1px solid var(--line-gold);
-  padding:26px 0;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  flex-wrap:wrap;
-  font-size:.82rem;
-  color:rgba(245,238,227,.4);
+  border-top:1px solid var(--line-gold);padding:26px 0;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;font-size:.82rem;color:rgba(245,238,227,.4);
 }
 
-/* ============================================================
-   АНИМАЦИИ И АДАПТИВ
-   ============================================================ */
+/* АНИМАЦИИ И АДАПТИВ */
 .reveal{
-  opacity:0;
-  transform:translateY(30px);
+  opacity:0;transform:translateY(30px);
   transition:opacity .9s cubic-bezier(.2,.8,.3,1), transform .9s cubic-bezier(.2,.8,.3,1);
 }
 .reveal.visible{opacity:1;transform:none}
@@ -1131,38 +640,19 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
 
 @media (max-width:960px){
   .burger{display:block}
-
   .main-nav{
-    position:fixed;
-    top:84px;
-    inset-inline:16px;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    background:var(--night);
-    border:1px solid var(--gold);
-    padding:14px;
-    transform:translateY(-16px);
-    opacity:0;
-    pointer-events:none;
-    transition:all .3s;
-    max-height:calc(100vh - 120px);
-    overflow-y:auto;
+    position:fixed;top:84px;inset-inline:16px;flex-direction:column;align-items:stretch;
+    gap:0;background:var(--night);border:1px solid var(--gold);padding:14px;
+    transform:translateY(-16px);opacity:0;pointer-events:none;
+    transition:all .3s;max-height:calc(100vh - 120px);overflow-y:auto;
   }
-  .main-nav.open{
-    transform:none;
-    opacity:1;
-    pointer-events:auto;
-  }
+  .main-nav.open{transform:none;opacity:1;pointer-events:auto}
   .main-nav .nav-link{
-    padding:16px 20px;
-    font-size:1rem;
-    border-bottom:1px solid var(--line-gold);
+    padding:16px 20px;font-size:1rem;border-bottom:1px solid var(--line-gold);
     color:var(--cream) !important;
   }
   .main-nav .nav-link:last-child{border-bottom:none}
   .main-nav .nav-link::after{display:none}
-
   .demo-search{grid-template-columns:1fr 1fr}
   .demo-search .btn{grid-column:1/-1}
   .hero-stats{grid-template-columns:1fr 1fr}
@@ -1170,16 +660,16 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
 
 @media (max-width:760px){
   .hero{padding:160px 0 120px;min-height:auto}
-  .hero-sun,.moon{width:90px;height:90px}
+  .moon{width:90px;height:90px}
   .search-card{padding:32px 24px;margin-top:-50px}
   .search-module-slot{padding:20px}
   .contact-form{padding:30px 24px}
   .contact-form .row{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:36px}
   .footer-bottom{justify-content:center;text-align:center}
-  .visa-meta{flex-direction:column;gap:12px}
   .why-grid{grid-template-columns:1fr}
   .why-card{border-inline-end:none}
+  .visas .visa-grid{grid-template-columns:1fr}
 }
 
 @media (max-width:560px){
@@ -1189,30 +679,20 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
   .hero-actions .btn{width:100%}
   .hero-stats{grid-template-columns:1fr;gap:20px}
   .stat{
-    border-inline-end:none !important;
-    padding:0 !important;
-    border-bottom:1px solid var(--line-gold);
-    padding-bottom:16px !important;
+    border-inline-end:none !important;padding:0 !important;
+    border-bottom:1px solid var(--line-gold);padding-bottom:16px !important;
   }
   .stat:last-child{border-bottom:none}
   .demo-search{grid-template-columns:1fr}
-  .cloud-2{display:none}
+  .visa-num{font-size:2rem;top:14px;inset-inline-end:16px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ============================================================
-     ШАПКА
-     ============================================================ -->
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
-
-    <!-- ================= МЕСТО ДЛЯ ФИРМЕННОГО ЛОГОТИПА =================
-         Замените на свой логотип:
-         <img src="images/logo.svg" alt="Urban Gulf" class="logo-img">
-         ================================================================= -->
     <a href="#home" class="logo" id="logo-slot" aria-label="Urban Gulf">
       <span class="logo-mark" aria-hidden="true">✦</span>
       <span class="logo-name">Urban Gulf<small>UAE Visa & Travel</small></span>
@@ -1228,10 +708,7 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
     </nav>
 
     <div class="header-right">
-
-      <!-- Языки: AR → EN → ZH → RU -->
       <div class="lang-switcher" role="group" aria-label="Language">
-
         <button class="lang-btn" data-lang="ar" title="العربية" aria-label="العربية">
           <span class="flag" aria-hidden="true">
             <svg viewBox="0 0 60 40" preserveAspectRatio="none">
@@ -1243,7 +720,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
           </span>
           <span class="code">AR</span>
         </button>
-
         <button class="lang-btn" data-lang="en" title="English" aria-label="English">
           <span class="flag" aria-hidden="true">
             <svg viewBox="0 0 60 40" preserveAspectRatio="none">
@@ -1256,7 +732,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
           </span>
           <span class="code">EN</span>
         </button>
-
         <button class="lang-btn" data-lang="zh" title="中文" aria-label="中文">
           <span class="flag" aria-hidden="true">
             <svg viewBox="0 0 60 40" preserveAspectRatio="none">
@@ -1268,7 +743,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
           </span>
           <span class="code">中文</span>
         </button>
-
         <button class="lang-btn" data-lang="ru" title="Русский" aria-label="Русский">
           <span class="flag" aria-hidden="true">
             <svg viewBox="0 0 60 40" preserveAspectRatio="none">
@@ -1279,7 +753,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
           </span>
           <span class="code">RU</span>
         </button>
-
       </div>
 
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
@@ -1291,81 +764,49 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
 
 <main>
 
-  <!-- ============================================================
-       HERO
-       ============================================================ -->
+  <!-- HERO -->
   <section id="home" class="hero">
     <div class="stars-bg" aria-hidden="true"></div>
     <div class="moon" aria-hidden="true"></div>
 
-    <!-- Арабески по углам -->
     <svg class="arabesque arabesque-tl" viewBox="0 0 100 100" aria-hidden="true">
       <g fill="none" stroke="#D4A24C" stroke-width="0.6">
-        <circle cx="50" cy="50" r="48"/>
-        <circle cx="50" cy="50" r="36"/>
-        <circle cx="50" cy="50" r="24"/>
-        <path d="M50 2 L98 50 L50 98 L2 50 Z"/>
-        <path d="M50 14 L86 50 L50 86 L14 50 Z"/>
+        <circle cx="50" cy="50" r="48"/><circle cx="50" cy="50" r="36"/><circle cx="50" cy="50" r="24"/>
+        <path d="M50 2 L98 50 L50 98 L2 50 Z"/><path d="M50 14 L86 50 L50 86 L14 50 Z"/>
       </g>
     </svg>
     <svg class="arabesque arabesque-br" viewBox="0 0 100 100" aria-hidden="true">
       <g fill="none" stroke="#D4A24C" stroke-width="0.6">
-        <circle cx="50" cy="50" r="48"/>
-        <circle cx="50" cy="50" r="36"/>
-        <circle cx="50" cy="50" r="24"/>
-        <path d="M50 2 L98 50 L50 98 L2 50 Z"/>
-        <path d="M50 14 L86 50 L50 86 L14 50 Z"/>
+        <circle cx="50" cy="50" r="48"/><circle cx="50" cy="50" r="36"/><circle cx="50" cy="50" r="24"/>
+        <path d="M50 2 L98 50 L50 98 L2 50 Z"/><path d="M50 14 L86 50 L50 86 L14 50 Z"/>
       </g>
     </svg>
 
-    <!-- Скайлайн Дубая -->
     <svg class="skyline" viewBox="0 0 1440 400" preserveAspectRatio="xMidYEnd slice" aria-hidden="true">
       <defs>
         <linearGradient id="bldg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#1A2F4A"/>
-          <stop offset="100%" stop-color="#0E1A2B"/>
+          <stop offset="0%" stop-color="#1A2F4A"/><stop offset="100%" stop-color="#0E1A2B"/>
         </linearGradient>
       </defs>
       <g fill="url(#bldg)" opacity="0.9">
-        <!-- Дальний план -->
-        <rect x="60" y="220" width="40" height="180"/>
-        <rect x="120" y="180" width="50" height="220"/>
-        <rect x="190" y="240" width="36" height="160"/>
-        <rect x="240" y="200" width="44" height="200"/>
-
-        <!-- Burj Al Arab (парус) -->
+        <rect x="60" y="220" width="40" height="180"/><rect x="120" y="180" width="50" height="220"/>
+        <rect x="190" y="240" width="36" height="160"/><rect x="240" y="200" width="44" height="200"/>
         <path d="M340 400 L340 200 Q360 130 400 130 Q420 200 420 260 L420 400 Z"/>
         <path d="M380 130 L380 80 L390 80 L390 130 Z" opacity="0.7"/>
-
-        <!-- Небоскрёбы среднего плана -->
-        <rect x="460" y="150" width="55" height="250"/>
-        <rect x="530" y="190" width="40" height="210"/>
-        <rect x="590" y="120" width="60" height="280"/>
-        <rect x="660" y="220" width="45" height="180"/>
-
-        <!-- Burj Khalifa (силуэт) -->
+        <rect x="460" y="150" width="55" height="250"/><rect x="530" y="190" width="40" height="210"/>
+        <rect x="590" y="120" width="60" height="280"/><rect x="660" y="220" width="45" height="180"/>
         <path d="M740 400 L740 80 L755 40 L770 80 L770 400 Z"/>
         <path d="M745 80 L755 20 L765 80 Z" opacity="0.9"/>
-
-        <rect x="790" y="170" width="50" height="230"/>
-        <rect x="860" y="200" width="38" height="200"/>
-        <rect x="910" y="140" width="56" height="260"/>
-        <rect x="985" y="220" width="42" height="180"/>
-        <rect x="1045" y="190" width="48" height="210"/>
-        <rect x="1110" y="160" width="52" height="240"/>
-        <rect x="1180" y="230" width="40" height="170"/>
-        <rect x="1240" y="200" width="46" height="200"/>
-        <rect x="1300" y="240" width="38" height="160"/>
-        <rect x="1350" y="210" width="42" height="190"/>
+        <rect x="790" y="170" width="50" height="230"/><rect x="860" y="200" width="38" height="200"/>
+        <rect x="910" y="140" width="56" height="260"/><rect x="985" y="220" width="42" height="180"/>
+        <rect x="1045" y="190" width="48" height="210"/><rect x="1110" y="160" width="52" height="240"/>
+        <rect x="1180" y="230" width="40" height="170"/><rect x="1240" y="200" width="46" height="200"/>
+        <rect x="1300" y="240" width="38" height="160"/><rect x="1350" y="210" width="42" height="190"/>
       </g>
-      <!-- Огни окон -->
       <g fill="#D4A24C" opacity="0.55">
-        <circle cx="380" cy="220" r="1.5"/>
-        <circle cx="390" cy="260" r="1.5"/>
-        <circle cx="755" cy="150" r="1.8"/>
-        <circle cx="760" cy="200" r="1.5"/>
-        <circle cx="935" cy="200" r="1.5"/>
-        <circle cx="1135" cy="200" r="1.5"/>
+        <circle cx="380" cy="220" r="1.5"/><circle cx="390" cy="260" r="1.5"/>
+        <circle cx="755" cy="150" r="1.8"/><circle cx="760" cy="200" r="1.5"/>
+        <circle cx="935" cy="200" r="1.5"/><circle cx="1135" cy="200" r="1.5"/>
         <circle cx="1140" cy="250" r="1.5"/>
       </g>
     </svg>
@@ -1373,39 +814,24 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
     <div class="container hero-inner">
       <div class="hero-content">
         <span class="hero-badge" data-i18n="hero.badge">تأشيرات الإمارات · سياحة · إقامة</span>
-
         <h1 data-i18n="hero.title">تأشيرة الإمارات<br><em>بدون تعقيد</em></h1>
-
         <p class="hero-sub" data-i18n="hero.subtitle">
           دعم تأشيرات كامل للإمارات العربية المتحدة: سياحية، تجارية، إقامة وتمديد. مراجعة المستندات، التقديم، والمتابعة حتى الإصدار.
         </p>
-
         <div class="hero-actions">
           <a href="#visas" class="btn btn-primary" data-i18n="hero.cta">اطلب تأشيرتك</a>
           <a href="#services" class="btn btn-ghost" data-i18n="hero.cta2">جولات الإمارات</a>
         </div>
-
         <div class="hero-stats">
-          <div class="stat">
-            <b data-i18n="hero.s1n">98%</b>
-            <span data-i18n="hero.s1l">نسبة الموافقة</span>
-          </div>
-          <div class="stat">
-            <b data-i18n="hero.s2n">24-72h</b>
-            <span data-i18n="hero.s2l">وقت المعالجة</span>
-          </div>
-          <div class="stat">
-            <b data-i18n="hero.s3n">15+</b>
-            <span data-i18n="hero.s3l">سنوات خبرة</span>
-          </div>
+          <div class="stat"><b data-i18n="hero.s1n">98%</b><span data-i18n="hero.s1l">نسبة الموافقة</span></div>
+          <div class="stat"><b data-i18n="hero.s2n">24-72h</b><span data-i18n="hero.s2l">وقت المعالجة</span></div>
+          <div class="stat"><b data-i18n="hero.s3n">15+</b><span data-i18n="hero.s3l">سنوات خبرة</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       ПОИСКОВИК
-       ============================================================ -->
+  <!-- ПОИСКОВИК -->
   <section id="search" class="search-section">
     <div class="container">
       <div class="search-card reveal">
@@ -1413,10 +839,7 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
         <p data-i18n="search.subtitle">
           اختر نوع التأشيرة، جنسيتك، ومدة الإقامة — وسنراجع متطلباتك خلال دقائق.
         </p>
-
-        <!-- МЕСТО ДЛЯ ВАШЕГО МОДУЛЯ ПОИСКОВИКА -->
         <div id="search-module-slot" class="search-module-slot">
-          <!-- ↓↓↓ ДЕМО — УДАЛИТЬ ПРИ ИНТЕГРАЦИИ ↓↓↓ -->
           <form class="demo-search" onsubmit="return false;">
             <div class="field">
               <label for="s-type" data-i18n="search.type">نوع التأشيرة</label>
@@ -1434,17 +857,12 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
             <div class="field">
               <label for="s-days" data-i18n="search.days">المدة</label>
               <select id="s-days">
-                <option>14</option>
-                <option>30</option>
-                <option>60</option>
-                <option>90</option>
+                <option>14</option><option>30</option><option>60</option><option>90</option>
               </select>
             </div>
             <button type="submit" class="btn btn-primary" data-i18n="search.btn">تحقق الآن</button>
           </form>
-          <!-- ↑↑↑ ДЕМО — УДАЛИТЬ ПРИ ИНТЕГРАЦИИ ↑↑↑ -->
         </div>
-
         <div class="search-note">
           <span data-i18n="search.note">هنا يتم وضع وحدة البحث الخاصة بك. استبدل النموذج التجريبي بالكود الخاص بك.</span>
         </div>
@@ -1452,276 +870,355 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
     </div>
   </section>
 
-  <!-- ============================================================
-       ВИТРИНА ВИЗ
-       ============================================================ -->
+  <!-- ВИТРИНА ВИЗ -->
   <section id="visas" class="visas">
     <div class="container">
 
       <div class="section-head reveal">
-        <span class="eyebrow" data-i18n="visas.eyebrow">تأشيرات الإمارات</span>
-        <h2 data-i18n="visas.title">خدمات التأشيرات</h2>
-        <p data-i18n="visas.subtitle">من التحقق من المستندات إلى التسليم — نرافقك في كل خطوة.</p>
+        <span class="eyebrow" data-i18n="visas.eyebrow">خدمات التأشيرات</span>
+        <h2 data-i18n="visas.title">باقات التأشيرات</h2>
+        <p data-i18n="visas.subtitle">حزم شاملة لتأشيرات الولايات المتحدة وشنغن والمملكة المتحدة واليابان — من القياسية إلى VIP.</p>
       </div>
 
       <div class="visa-grid">
 
+        <!-- США -->
         <article class="visa-card reveal">
           <span class="visa-num" aria-hidden="true">01</span>
-          <div class="visa-icon" aria-hidden="true">🛂</div>
-          <h3 data-i18n="visas.v1t">تأشيرة سياحية</h3>
-          <p data-i18n="visas.v1d">تأشيرة سياحية قصيرة الأجل لمدة 30 أو 60 يومًا.</p>
-          <div class="visa-meta">
-            <div>
-              <span data-i18n="visas.metaTime">المدة</span>
-              <b data-i18n="visas.v1time">3-5 أيام</b>
+          <div class="visa-country-header">
+            <span class="visa-country-flag" aria-hidden="true">🇺🇸</span>
+            <h3 data-i18n="visas.usa.title">تأشيرة الولايات المتحدة</h3>
+          </div>
+          <div class="visa-package-list">
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--standard" data-i18n="visas.tiers.standard">قياسي</span>
+                <span class="package-price"><b>2,900</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.usa.p1.appt">خلال 5 أشهر</span></span>
+              </div>
             </div>
-            <div>
-              <span data-i18n="visas.metaType">النوع</span>
-              <b data-i18n="visas.v1type">سياحية</b>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--priority" data-i18n="visas.tiers.priority">أولوية</span>
+                <span class="package-price"><b>4,500</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.usa.p2.appt">خلال 3 أشهر</span></span>
+              </div>
+            </div>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--urgent" data-i18n="visas.tiers.urgent">عاجل</span>
+                <span class="package-price"><b>7,000</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.usa.p3.appt">خلال شهرين</span></span>
+              </div>
+            </div>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--premium" data-i18n="visas.tiers.premium">بريميوم</span>
+                <span class="package-price"><b>9,000</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.usa.p4.appt">خلال 3 أسابيع</span></span>
+              </div>
+            </div>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--vip" data-i18n="visas.tiers.vip">VIP</span>
+                <span class="package-price"><b>12,000</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.usa.p5.appt">خلال 1-2 أسبوع</span></span>
+              </div>
             </div>
           </div>
-          <a href="#contacts" class="link-arrow">
-            <span data-i18n="common.learn">تفاصيل</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
         </article>
 
+        <!-- Шенген -->
         <article class="visa-card reveal">
           <span class="visa-num" aria-hidden="true">02</span>
-          <div class="visa-icon" aria-hidden="true">💼</div>
-          <h3 data-i18n="visas.v2t">تأشيرة تجارية</h3>
-          <p data-i18n="visas.v2d">تأشيرة لأغراض الأعمال والاجتماعات والمؤتمرات.</p>
-          <div class="visa-meta">
-            <div>
-              <span data-i18n="visas.metaTime">المدة</span>
-              <b data-i18n="visas.v2time">5-7 أيام</b>
+          <div class="visa-country-header">
+            <span class="visa-country-flag" aria-hidden="true">🇪🇺</span>
+            <h3 data-i18n="visas.schengen.title">تأشيرة شنغن</h3>
+          </div>
+          <div class="visa-package-list">
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--standard" data-i18n="visas.tiers.standard">قياسي</span>
+                <span class="package-price"><b>2,500</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.schengen.p1.appt">خلال شهرين</span></span>
+              </div>
             </div>
-            <div>
-              <span data-i18n="visas.metaType">النوع</span>
-              <b data-i18n="visas.v2type">تجارية</b>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--urgent" data-i18n="visas.tiers.urgent">عاجل</span>
+                <span class="package-price"><b>3,900</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.schengen.p2.appt">خلال شهر</span></span>
+              </div>
+            </div>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--premium" data-i18n="visas.tiers.premium">بريميوم</span>
+                <span class="package-price"><b>7,000</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.schengen.p3.appt">خلال 10-14 يومًا</span></span>
+              </div>
+            </div>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--vip" data-i18n="visas.tiers.vip">VIP</span>
+                <span class="package-price"><b>9,000</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.schengen.p4.appt">خلال 2-5 أيام</span></span>
+              </div>
             </div>
           </div>
-          <a href="#contacts" class="link-arrow">
-            <span data-i18n="common.learn">تفاصيل</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
+          <div class="package-note">
+            <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.schengen.processing">2-3 أسابيع</span></span>
+          </div>
         </article>
 
+        <!-- Великобритания -->
         <article class="visa-card reveal">
           <span class="visa-num" aria-hidden="true">03</span>
-          <div class="visa-icon" aria-hidden="true">🏠</div>
-          <h3 data-i18n="visas.v3t">إقامة طويلة</h3>
-          <p data-i18n="visas.v3d">تأشيرة إقامة طويلة للمستثمرين وأصحاب الأعمال.</p>
-          <div class="visa-meta">
-            <div>
-              <span data-i18n="visas.metaTime">المدة</span>
-              <b data-i18n="visas.v3time">10-14 يومًا</b>
+          <div class="visa-country-header">
+            <span class="visa-country-flag" aria-hidden="true">🇬🇧</span>
+            <h3 data-i18n="visas.uk.title">تأشيرة المملكة المتحدة</h3>
+          </div>
+          <div class="visa-package-list">
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--standard" data-i18n="visas.tiers.standard">قياسي</span>
+                <span class="package-type-note" data-i18n="visas.uk.multiEntry">دخول متعدد</span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.uk.p1.appt">خلال أسبوعين</span></span>
+                <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.uk.p1.processing">15-20 يوم عمل</span></span>
+              </div>
+              <div class="duration-list">
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d6m">6 أشهر</span>
+                  <span class="duration-price"><b>4,000</b> AED</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d2y">سنتان</span>
+                  <span class="duration-price"><b>6,000</b> AED</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d5y">5 سنوات</span>
+                  <span class="duration-price"><b>9,000</b> AED</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d10y">10 سنوات</span>
+                  <span class="duration-price"><b>10,500</b> AED</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <span data-i18n="visas.metaType">النوع</span>
-              <b data-i18n="visas.v3type">إقامة</b>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--priority" data-i18n="visas.tiers.priority">أولوية</span>
+                <span class="package-type-note" data-i18n="visas.uk.multiEntry">دخول متعدد</span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.uk.p2.appt">خلال 5 أيام عمل</span></span>
+                <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.uk.p2.processing">3-5 أيام عمل</span></span>
+              </div>
+              <div class="duration-list">
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d6m">6 أشهر</span>
+                  <span class="duration-price"><b>7,500</b> AED</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d2y">سنتان</span>
+                  <span class="duration-price"><b>9,500</b> AED</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d5y">5 سنوات</span>
+                  <span class="duration-price"><b>11,500</b> AED</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d10y">10 سنوات</span>
+                  <span class="duration-price"><b>13,000</b> AED</span>
+                </div>
+              </div>
+            </div>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--super" data-i18n="visas.tiers.super">سوبر أولوية</span>
+                <span class="package-type-note" data-i18n="visas.uk.multiEntry">دخول متعدد</span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.uk.p3.appt">خلال 1-2 يوم عمل</span></span>
+                <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.uk.p3.processing">24-48 ساعة</span></span>
+              </div>
+              <div class="duration-list">
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d6m">6 أشهر</span>
+                  <span class="duration-price"><b>10,700</b> AED</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d2y">سنتان</span>
+                  <span class="duration-price"><b>12,700</b> AED</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d5y">5 سنوات</span>
+                  <span class="duration-price"><b>14,000</b> AED</span>
+                </div>
+                <div class="duration-row">
+                  <span class="duration-label" data-i18n="visas.uk.durations.d10y">10 سنوات</span>
+                  <span class="duration-price"><b>15,500</b> AED</span>
+                </div>
+              </div>
             </div>
           </div>
-          <a href="#contacts" class="link-arrow">
-            <span data-i18n="common.learn">تفاصيل</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
         </article>
 
+        <!-- Япония -->
         <article class="visa-card reveal">
           <span class="visa-num" aria-hidden="true">04</span>
-          <div class="visa-icon" aria-hidden="true">⏳</div>
-          <h3 data-i18n="visas.v4t">تمديد التأشيرة</h3>
-          <p data-i18n="visas.v4d">تمديد إقامتك داخل الإمارات دون مغادرة البلاد.</p>
-          <div class="visa-meta">
-            <div>
-              <span data-i18n="visas.metaTime">المدة</span>
-              <b data-i18n="visas.v4time">2-4 أيام</b>
+          <div class="visa-country-header">
+            <span class="visa-country-flag" aria-hidden="true">🇯🇵</span>
+            <h3 data-i18n="visas.japan.title">تأشيرة اليابان</h3>
+          </div>
+          <div class="visa-package-list">
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--standard" data-i18n="visas.tiers.standard">قياسي</span>
+                <span class="package-price"><b>2,500</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.japan.p1.appt">خلال 1-2 شهر</span></span>
+                <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.japan.p1.processing">8-10 أيام عمل</span></span>
+              </div>
             </div>
-            <div>
-              <span data-i18n="visas.metaType">النوع</span>
-              <b data-i18n="visas.v4type">تمديد</b>
+            <div class="visa-package">
+              <div class="package-head">
+                <span class="tier tier--urgent" data-i18n="visas.tiers.urgent">عاجل</span>
+                <span class="package-price"><b>3,500</b> AED <small data-i18n="visas.vat">+5% ضريبة</small></span>
+              </div>
+              <div class="package-meta">
+                <span>📍 <span data-i18n="visas.labels.appointment">الموعد</span>: <span data-i18n="visas.japan.p2.appt">خلال 1-2 أسبوع</span></span>
+                <span>🕐 <span data-i18n="visas.labels.processing">المعالجة</span>: <span data-i18n="visas.japan.p2.processing">8-10 أيام عمل</span></span>
+              </div>
             </div>
           </div>
-          <a href="#contacts" class="link-arrow">
-            <span data-i18n="common.learn">تفاصيل</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
-        </article>
-
-        <article class="visa-card reveal">
-          <span class="visa-num" aria-hidden="true">05</span>
-          <div class="visa-icon" aria-hidden="true">👨‍👩‍👧</div>
-          <h3 data-i18n="visas.v5t">تأشيرة عائلية</h3>
-          <p data-i18n="visas.v5d">تأشيرة زيارة للأقارب والأصدقاء داخل الإمارات.</p>
-          <div class="visa-meta">
-            <div>
-              <span data-i18n="visas.metaTime">المدة</span>
-              <b data-i18n="visas.v5time">4-6 أيام</b>
-            </div>
-            <div>
-              <span data-i18n="visas.metaType">النوع</span>
-              <b data-i18n="visas.v5type">عائلية</b>
-            </div>
-          </div>
-          <a href="#contacts" class="link-arrow">
-            <span data-i18n="common.learn">تفاصيل</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
-        </article>
-
-        <article class="visa-card reveal">
-          <span class="visa-num" aria-hidden="true">06</span>
-          <div class="visa-icon" aria-hidden="true">🎓</div>
-          <h3 data-i18n="visas.v6t">تأشيرة طلابية</h3>
-          <p data-i18n="visas.v6d">تأشيرة للدراسة في الجامعات والمعاهد الإماراتية.</p>
-          <div class="visa-meta">
-            <div>
-              <span data-i18n="visas.metaTime">المدة</span>
-              <b data-i18n="visas.v6time">7-10 أيام</b>
-            </div>
-            <div>
-              <span data-i18n="visas.metaType">النوع</span>
-              <b data-i18n="visas.v6type">دراسية</b>
-            </div>
-          </div>
-          <a href="#contacts" class="link-arrow">
-            <span data-i18n="common.learn">تفاصيل</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a>
+          <div class="package-note" data-i18n="visas.japan.note1">💳 رسوم قنصلية 80 درهم للتأشيرة أحادية الدخول تُدفع بشكل منفصل في القنصلية أو سفارة اليابان.</div>
+          <div class="package-note" data-i18n="visas.japan.note2">💳 إضافي: يدفع العملاء رسوم المساعدة العاجلة ورسوم القنصلية 928 درهم مباشرة في مركز التأشيرات.</div>
         </article>
 
       </div>
 
       <p class="visa-note reveal" data-i18n="visas.note">
-        تخضع الرسوم والمدة الدقيقة للجنسية ونوع التأشيرة — يرجى التأكيد مع فريقنا.
+        الأسعار لا تشمل ضريبة القيمة المضافة 5%. الرسوم والمدة الدقيقة تعتمد على الجنسية — يرجى التأكيد مع فريقنا.
       </p>
     </div>
   </section>
 
-  <!-- ============================================================
-       УСЛУГИ (туры по ОАЭ)
-       ============================================================ -->
+  <!-- УСЛУГИ -->
   <section id="services" class="services">
     <div class="container">
-
       <div class="section-head reveal">
         <span class="eyebrow" data-i18n="services.eyebrow">جولات الإمارات</span>
         <h2 data-i18n="services.title">خدماتنا الأخرى</h2>
         <p data-i18n="services.subtitle">بعد الحصول على التأشيرة — اكتشف الإمارات معنا.</p>
       </div>
-
       <div class="service-grid">
-
         <article class="service-card reveal">
           <div class="service-icon" aria-hidden="true">🏙️</div>
           <h3 data-i18n="services.s1t">جولات دبي</h3>
           <p data-i18n="services.s1d">برج خليفة، دبي مول، نخلة جميرا، والسوق القديم.</p>
         </article>
-
         <article class="service-card reveal">
           <div class="service-icon" aria-hidden="true">🕌</div>
           <h3 data-i18n="services.s2t">جولات أبوظبي</h3>
           <p data-i18n="services.s2d">جامع الشيخ زايد، قصر الإمارات، وجزيرة ياس.</p>
         </article>
-
         <article class="service-card reveal">
           <div class="service-icon" aria-hidden="true">🏜️</div>
           <h3 data-i18n="services.s3t">سفاري الصحراء</h3>
           <p data-i18n="services.s3d">رحلات الكثبان الرملية، ركوب الجمال، وعشاء بدوي.</p>
         </article>
-
         <article class="service-card reveal">
           <div class="service-icon" aria-hidden="true">⛵</div>
           <h3 data-i18n="services.s4t">رحلات بحرية</h3>
           <p data-i18n="services.s4d">جولات باليخوت والقوارب في مياه الخليج.</p>
         </article>
-
         <article class="service-card reveal">
           <div class="service-icon" aria-hidden="true">🚐</div>
           <h3 data-i18n="services.s5t">نقل من المطار</h3>
           <p data-i18n="services.s5d">استقبال وتوصيل خاص من وإلى جميع المطارات.</p>
         </article>
-
         <article class="service-card reveal">
           <div class="service-icon" aria-hidden="true">🏨</div>
           <h3 data-i18n="services.s6t">حجز الفنادق</h3>
           <p data-i18n="services.s6d">فنادق من 3 إلى 7 نجوم بأسعار تفضيلية.</p>
         </article>
-
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       ПОЧЕМУ МЫ
-       ============================================================ -->
+  <!-- ПОЧЕМУ МЫ -->
   <section id="why" class="why">
     <div class="container">
-
       <div class="section-head reveal">
         <span class="eyebrow" data-i18n="why.eyebrow">مزايانا</span>
         <h2 data-i18n="why.title">لماذا Urban Gulf</h2>
         <p data-i18n="why.subtitle">خبرة في التأشيرات، شفافية في الأسعار، ومتابعة حتى النهاية.</p>
       </div>
-
       <div class="why-grid">
-
         <article class="why-card reveal">
           <span class="why-num">01</span>
           <h3 data-i18n="why.w1t">خبرة 15+ عامًا</h3>
           <p data-i18n="why.w1d">فريق متخصص في قوانين الهجرة الإماراتية.</p>
         </article>
-
         <article class="why-card reveal">
           <span class="why-num">02</span>
           <h3 data-i18n="why.w2t">نسبة موافقة 98%</h3>
           <p data-i18n="why.w2d">مراجعة دقيقة للمستندات قبل التقديم.</p>
         </article>
-
         <article class="why-card reveal">
           <span class="why-num">03</span>
           <h3 data-i18n="why.w3t">معالجة سريعة</h3>
           <p data-i18n="why.w3d">من 24 إلى 72 ساعة حسب نوع التأشيرة.</p>
         </article>
-
         <article class="why-card reveal">
           <span class="why-num">04</span>
           <h3 data-i18n="why.w4t">أسعار شفافة</h3>
           <p data-i18n="why.w4d">لا رسوم خفية — السعر النهائي قبل البدء.</p>
         </article>
-
         <article class="why-card reveal">
           <span class="why-num">05</span>
           <h3 data-i18n="why.w5t">دعم متعدد اللغات</h3>
           <p data-i18n="why.w5d">العربية، الإنجليزية، الصينية، الروسية.</p>
         </article>
-
         <article class="why-card reveal">
           <span class="why-num">06</span>
           <h3 data-i18n="why.w6t">متابعة كاملة</h3>
           <p data-i18n="why.w6d">من الاستشارة الأولى حتى استلام التأشيرة.</p>
         </article>
-
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       ОТЗЫВЫ
-       ============================================================ -->
+  <!-- ОТЗЫВЫ -->
   <section id="reviews" class="reviews">
     <div class="container">
-
       <div class="section-head reveal">
         <span class="eyebrow" data-i18n="reviews.eyebrow">آراء العملاء</span>
         <h2 data-i18n="reviews.title">ماذا يقول عملاؤنا</h2>
         <p data-i18n="reviews.subtitle">أكثر من 5000 تأشيرة تم إصدارها بنجاح.</p>
       </div>
-
       <div class="review-grid">
-
         <article class="review-card reveal">
           <span class="review-mark" aria-hidden="true">”</span>
           <div class="stars" aria-hidden="true">★★★★★</div>
@@ -1731,7 +1228,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
             <b data-i18n="reviews.r1a">أحمد، الرياض</b>
           </div>
         </article>
-
         <article class="review-card reveal">
           <span class="review-mark" aria-hidden="true">”</span>
           <div class="stars" aria-hidden="true">★★★★★</div>
@@ -1741,7 +1237,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
             <b data-i18n="reviews.r2a">ليلى، القاهرة</b>
           </div>
         </article>
-
         <article class="review-card reveal">
           <span class="review-mark" aria-hidden="true">”</span>
           <div class="stars" aria-hidden="true">★★★★★</div>
@@ -1751,28 +1246,21 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
             <b data-i18n="reviews.r3a">تشانغ، بكين</b>
           </div>
         </article>
-
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       КОНТАКТЫ
-       ============================================================ -->
+  <!-- КОНТАКТЫ -->
   <section id="contacts" class="contacts">
     <div class="container">
-
       <div class="section-head reveal">
         <span class="eyebrow" data-i18n="contacts.eyebrow">اتصل بنا</span>
         <h2 data-i18n="contacts.title">تواصل معنا</h2>
         <p data-i18n="contacts.subtitle">أخبرنا عن احتياجك — سنرد خلال ساعة عمل واحدة.</p>
       </div>
-
       <div class="contacts-grid">
-
         <div class="reveal">
           <div class="contact-list">
-
             <div class="contact-item">
               <span class="ci" aria-hidden="true">📞</span>
               <div>
@@ -1780,7 +1268,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
                 <a href="tel:+971505201179">+971 (50) 52-01-179</a>
               </div>
             </div>
-
             <div class="contact-item">
               <span class="ci" aria-hidden="true">✉️</span>
               <div>
@@ -1788,7 +1275,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
                 <a href="mailto:hello@UrbanGulf.ae">hello@UrbanGulf.ae</a>
               </div>
             </div>
-
             <div class="contact-item">
               <span class="ci" aria-hidden="true">📍</span>
               <div>
@@ -1796,7 +1282,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
                 <span data-i18n="contacts.addrV">دبي، الخليج التجاري، برج البوابة، الطابق 12</span>
               </div>
             </div>
-
             <div class="contact-item">
               <span class="ci" aria-hidden="true">🕐</span>
               <div>
@@ -1804,10 +1289,8 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
                 <span data-i18n="contacts.hoursV">الاثنين–الخميس: 9:00–18:00، الجمعة: 9:00–12:00، السبت–الأحد: مغلق</span>
               </div>
             </div>
-
           </div>
         </div>
-
         <div class="contact-form reveal">
           <form onsubmit="return false;">
             <div class="row">
@@ -1827,21 +1310,15 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
             <button type="submit" class="btn btn-primary" data-i18n="contacts.send">أرسل الطلب</button>
           </form>
         </div>
-
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- ============================================================
-     ПОДВАЛ
-     ============================================================ -->
 <footer class="site-footer">
   <div class="container">
-
     <div class="footer-grid">
-
       <div class="footer-brand">
         <a href="#home" class="logo" aria-label="Urban Gulf">
           <span class="logo-mark" aria-hidden="true">✦</span>
@@ -1849,7 +1326,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
         </a>
         <p data-i18n="footer.desc">وكالة متخصصة في تأشيرات الإمارات والجولات السياحية.</p>
       </div>
-
       <div class="footer-col">
         <h4 data-i18n="footer.navTitle">التنقل</h4>
         <ul>
@@ -1861,7 +1337,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
           <li><a href="#contacts" data-i18n="nav.contacts">اتصل بنا</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4 data-i18n="footer.contactTitle">جهات الاتصال</h4>
         <ul>
@@ -1870,7 +1345,6 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
           <li data-i18n="contacts.addrV">دبي، الخليج التجاري، برج البوابة، الطابق 12</li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4 data-i18n="footer.followTitle">تابعنا</h4>
         <div class="socials">
@@ -1893,20 +1367,14 @@ html[lang="ar"] .why-card h3{font-family:'Cairo',sans-serif}
           </a>
         </div>
       </div>
-
     </div>
-
     <div class="footer-bottom">
       <span>© <span id="year">2025</span> Urban Gulf. <span data-i18n="footer.rights">جميع الحقوق محفوظة.</span></span>
       <span data-i18n="footer.made">صُنع بحب للسفر</span>
     </div>
-
   </div>
 </footer>
 
-<!-- ============================================================
-     JS
-     ============================================================ -->
 <script>
 const translations = {
 
@@ -1915,83 +1383,106 @@ const translations = {
     nav: { home:'الرئيسية', visas:'التأشيرات', services:'الخدمات', why:'لماذا نحن', reviews:'آراء العملاء', contacts:'اتصل بنا' },
     common: { learn:'تفاصيل' },
     hero: {
-      badge:'تأشيرات الإمارات · سياحة · إقامة',
-      title:'تأشيرة الإمارات<br><em>بدون تعقيد</em>',
-      subtitle:'دعم تأشيرات كامل للإمارات العربية المتحدة: سياحية، تجارية، إقامة وتمديد. مراجعة المستندات، التقديم، والمتابعة حتى الإصدار.',
-      cta:'اطلب تأشيرتك', cta2:'جولات الإمارات',
+      badge:'تأشيرات · سفر · للمقيمين في الإمارات',
+      title:'تأشيرتك إلى العالم<br><em>من الإمارات</em>',
+      subtitle:'دعم تأشيرات كامل للمقيمين في الإمارات: الولايات المتحدة، شنغن، المملكة المتحدة، اليابان وغيرها. مراجعة المستندات، حجز المواعيد، التقديم، والمتابعة حتى الإصدار.',
+      cta:'اطلب تأشيرتك', cta2:'خدماتنا',
       s1n:'98%', s1l:'نسبة الموافقة',
-      s2n:'24-72h', s2l:'وقت المعالجة',
+      s2n:'50+', s2l:'دولة',
       s3n:'15+', s3l:'سنوات خبرة'
     },
     search: {
-      title:'تحقق من أهليتك للحصول على التأشيرة',
-      subtitle:'اختر نوع التأشيرة، جنسيتك، ومدة الإقامة — وسنراجع متطلباتك خلال دقائق.',
-      type:'نوع التأشيرة', type1:'سياحية', type2:'تجارية', type3:'إقامة', type4:'تمديد',
-      country:'الجنسية', countryPh:'مثال: مصر',
-      days:'المدة', btn:'تحقق الآن',
+      title:'اعثر على التأشيرة المناسبة',
+      subtitle:'اختر الوجهة وجنسيتك ونوع الباقة — وسنرشدك إلى أفضل خيار.',
+      dest:'الوجهة', dest1:'الولايات المتحدة', dest2:'شنغن', dest3:'المملكة المتحدة', dest4:'اليابان', dest5:'أخرى',
+      country:'الجنسية', countryPh:'مثال: الهند',
+      package:'الباقة', pkg1:'قياسي', pkg2:'أولوية', pkg3:'عاجل', pkg4:'VIP',
+      btn:'ابحث',
       note:'هنا يتم وضع وحدة البحث الخاصة بك. استبدل النموذج التجريبي بالكود الخاص بك.'
     },
     visas: {
-      eyebrow:'تأشيرات الإمارات',
-      title:'خدمات التأشيرات',
-      subtitle:'من التحقق من المستندات إلى التسليم — نرافقك في كل خطوة.',
-      metaTime:'المدة', metaType:'النوع',
-      v1t:'تأشيرة سياحية',   v1d:'تأشيرة سياحية قصيرة الأجل لمدة 30 أو 60 يومًا.', v1time:'3-5 أيام',   v1type:'سياحية',
-      v2t:'تأشيرة تجارية',   v2d:'تأشيرة لأغراض الأعمال والاجتماعات والمؤتمرات.',       v2time:'5-7 أيام',   v2type:'تجارية',
-      v3t:'إقامة طويلة',     v3d:'تأشيرة إقامة طويلة للمستثمرين وأصحاب الأعمال.',         v3time:'10-14 يومًا', v3type:'إقامة',
-      v4t:'تمديد التأشيرة',  v4d:'تمديد إقامتك داخل الإمارات دون مغادرة البلاد.',        v4time:'2-4 أيام',   v4type:'تمديد',
-      v5t:'تأشيرة عائلية',   v5d:'تأشيرة زيارة للأقارب والأصدقاء داخل الإمارات.',         v5time:'4-6 أيام',   v5type:'عائلية',
-      v6t:'تأشيرة طلابية',   v6d:'تأشيرة للدراسة في الجامعات والمعاهد الإماراتية.',       v6time:'7-10 أيام', v6type:'دراسية',
-      note:'تخضع الرسوم والمدة الدقيقة للجنسية ونوع التأشيرة — يرجى التأكيد مع فريقنا.'
+      eyebrow:'خدمات التأشيرات',
+      title:'باقات التأشيرات',
+      subtitle:'حزم شاملة للمقيمين في الإمارات — من الولايات المتحدة وشنغن إلى المملكة المتحدة واليابان.',
+      note:'الأسعار لا تشمل ضريبة القيمة المضافة 5%. الرسوم والمدة الدقيقة تعتمد على الجنسية — يرجى التأكيد مع فريقنا.',
+      vat:'+5% ضريبة',
+      tiers: {
+        standard:'قياسي', priority:'أولوية', urgent:'عاجل',
+        premium:'بريميوم', vip:'VIP', super:'سوبر أولوية'
+      },
+      labels: { appointment:'الموعد', processing:'المعالجة' },
+      usa: {
+        title:'تأشيرة الولايات المتحدة',
+        p1:{ appt:'خلال 5 أشهر' }, p2:{ appt:'خلال 3 أشهر' }, p3:{ appt:'خلال شهرين' },
+        p4:{ appt:'خلال 3 أسابيع' }, p5:{ appt:'خلال 1-2 أسبوع' }
+      },
+      schengen: {
+        title:'تأشيرة شنغن',
+        processing:'2-3 أسابيع',
+        p1:{ appt:'خلال شهرين' }, p2:{ appt:'خلال شهر' },
+        p3:{ appt:'خلال 10-14 يومًا' }, p4:{ appt:'خلال 2-5 أيام' }
+      },
+      uk: {
+        title:'تأشيرة المملكة المتحدة',
+        multiEntry:'دخول متعدد',
+        durations:{ d6m:'6 أشهر', d2y:'سنتان', d5y:'5 سنوات', d10y:'10 سنوات' },
+        p1:{ appt:'خلال أسبوعين', processing:'15-20 يوم عمل' },
+        p2:{ appt:'خلال 5 أيام عمل', processing:'3-5 أيام عمل' },
+        p3:{ appt:'خلال 1-2 يوم عمل', processing:'24-48 ساعة' }
+      },
+      japan: {
+        title:'تأشيرة اليابان',
+        p1:{ appt:'خلال 1-2 شهر', processing:'8-10 أيام عمل' },
+        p2:{ appt:'خلال 1-2 أسبوع', processing:'8-10 أيام عمل' },
+        note1:'💳 رسوم قنصلية 80 درهم للتأشيرة أحادية الدخول تُدفع بشكل منفصل في القنصلية أو سفارة اليابان.',
+        note2:'💳 إضافي: يدفع العملاء رسوم المساعدة العاجلة ورسوم القنصلية 928 درهم مباشرة في مركز التأشيرات.'
+      }
     },
     services: {
-      eyebrow:'جولات الإمارات',
-      title:'خدماتنا الأخرى',
-      subtitle:'بعد الحصول على التأشيرة — اكتشف الإمارات معنا.',
-      s1t:'جولات دبي',       s1d:'برج خليفة، دبي مول، نخلة جميرا، والسوق القديم.',
-      s2t:'جولات أبوظبي',    s2d:'جامع الشيخ زايد، قصر الإمارات، وجزيرة ياس.',
-      s3t:'سفاري الصحراء',   s3d:'رحلات الكثبان الرملية، ركوب الجمال، وعشاء بدوي.',
-      s4t:'رحلات بحرية',     s4d:'جولات باليخوت والقوارب في مياه الخليج.',
-      s5t:'نقل من المطار',   s5d:'استقبال وتوصيل خاص من وإلى جميع المطارات.',
-      s6t:'حجز الفنادق',     s6d:'فنادق من 3 إلى 7 نجوم بأسعار تفضيلية.'
+      eyebrow:'خدمات السفر',
+      title:'خدماتنا للمقيمين',
+      subtitle:'بعد الحصول على التأشيرة — نساعدك في تنظيم الرحلة كاملة.',
+      s1t:'باقات سياحية',         s1d:'أوروبا وآسيا وأمريكا — عروض جاهزة لكل ميزانية.',
+      s2t:'حجز تذاكر الطيران',    s2d:'أسعار مناسبة ومسارات مرنة حول العالم.',
+      s3t:'حجز الفنادق',          s3d:'من الفنادق البوتيك إلى منتجعات 5★ بأفضل الأسعار.',
+      s4t:'تأمين السفر',          s4d:'وثائق طبية وتأمين أمتعة مقبولة لدى السفارات.',
+      s5t:'خدمات النقل',          s5d:'استقبال في المطار وتأجير سيارات مع سائق.',
+      s6t:'رحلات الشركات',        s6d:'رحلات عمل ومؤتمرات ومجموعات — خدمة متكاملة.'
     },
     why: {
       eyebrow:'مزايانا',
       title:'لماذا Urban Gulf',
       subtitle:'خبرة في التأشيرات، شفافية في الأسعار، ومتابعة حتى النهاية.',
-      w1t:'خبرة 15+ عامًا',    w1d:'فريق متخصص في قوانين الهجرة الإماراتية.',
-      w2t:'نسبة موافقة 98%',   w2d:'مراجعة دقيقة للمستندات قبل التقديم.',
-      w3t:'معالجة سريعة',      w3d:'من 24 إلى 72 ساعة حسب نوع التأشيرة.',
-      w4t:'أسعار شفافة',       w4d:'لا رسوم خفية — السعر النهائي قبل البدء.',
-      w5t:'دعم متعدد اللغات',  w5d:'العربية، الإنجليزية، الصينية، الروسية.',
-      w6t:'متابعة كاملة',      w6d:'من الاستشارة الأولى حتى استلام التأشيرة.'
+      w1t:'خبرة 15+ عامًا',        w1d:'فريق يعرف متطلبات سفارات الدول المختلفة.',
+      w2t:'نسبة موافقة 98%',       w2d:'مراجعة دقيقة للمستندات قبل التقديم.',
+      w3t:'تركيز على المقيمين',    w3d:'نعمل مع المقيمين في الإمارات يوميًا.',
+      w4t:'أسعار شفافة',           w4d:'لا رسوم خفية — السعر النهائي قبل البدء.',
+      w5t:'دعم متعدد اللغات',      w5d:'العربية، الإنجليزية، الصينية، الروسية.',
+      w6t:'متابعة كاملة',          w6d:'من الاستشارة الأولى حتى استلام التأشيرة.'
     },
     reviews: {
       eyebrow:'آراء العملاء',
-      title:'ماذا يقول عملاؤنا',
-      subtitle:'أكثر من 5000 تأشيرة تم إصدارها بنجاح.',
-      r1t:'«حصلت على تأشيرتي السياحية للإمارات في 3 أيام فقط. خدمة احترافية وفريق متعاون.»',
-      r1a:'أحمد، الرياض',
-      r2t:'«ساعدوني في تأشيرة الإقامة لشركتي في دبي. كل شيء واضح وسريع.»',
-      r2a:'ليلى، القاهرة',
-      r3t:'«حصلت على تأشيرة طلابية لابني في أسبوع. شكرًا على المتابعة المستمرة.»',
-      r3a:'تشانغ، بكين'
+      title:'ماذا يقول المقيمون في الإمارات',
+      subtitle:'أكثر من 5000 تأشيرة صادرة للمقيمين.',
+      r1t:'«حصلت على تأشيرة شنغن في دبي خلال 3 أسابيع. ساعدوني في كل خطوة — من المستندات حتى الموعد.»', r1a:'آنا، دبي',
+      r2t:'«تأشيرة بريطانية لسنتين لعائلتي — كل شيء واضح وسريع. شكرًا على المتابعة.»', r2a:'أحمد، الشارقة',
+      r3t:'«تأشيرة يابانية لوالديّ في 3 أسابيع. خدمة احترافية بكل معنى الكلمة.»', r3a:'لي وي، أبوظبي'
     },
     contacts: {
       eyebrow:'اتصل بنا',
       title:'تواصل معنا',
-      subtitle:'أخبرنا عن احتياجك — سنرد خلال ساعة عمل واحدة.',
+      subtitle:'أخبرنا عن خطتك للسفر — سنرد خلال ساعة عمل واحدة.',
       phoneL:'الهاتف', emailL:'البريد الإلكتروني', addrL:'العنوان', hoursL:'ساعات العمل',
       addrV:'دبي، الخليج التجاري، برج البوابة، الطابق 12',
       hoursV:'الاثنين–الخميس: 9:00–18:00، الجمعة: 9:00–12:00، السبت–الأحد: مغلق',
       name:'الاسم', namePh:'كيف نناديك؟',
       emailPh:'you@example.com',
-      msg:'الرسالة', msgPh:'أي نوع من التأشيرات تحتاج؟',
+      msg:'الرسالة', msgPh:'إلى أين تخطط للسفر؟',
       send:'أرسل الطلب'
     },
     footer: {
       navTitle:'التنقل', contactTitle:'جهات الاتصال', followTitle:'تابعنا',
-      desc:'وكالة متخصصة في تأشيرات الإمارات والجولات السياحية.',
+      desc:'وكالة تأشيرات وسفر للمقيمين في الإمارات.',
       rights:'جميع الحقوق محفوظة.',
       made:'صُنع بحب للسفر'
     }
@@ -2002,83 +1493,106 @@ const translations = {
     nav: { home:'Home', visas:'Visas', services:'Services', why:'Why us', reviews:'Reviews', contacts:'Contacts' },
     common: { learn:'Details' },
     hero: {
-      badge:'UAE visas · Travel · Residency',
-      title:'UAE visa,<br><em>made simple</em>',
-      subtitle:'Full visa support for the United Arab Emirates: tourist, business, residency and extension. Document review, submission, and follow-up until issuance.',
-      cta:'Request your visa', cta2:'UAE tours',
+      badge:'Visa · Travel · for UAE residents',
+      title:'Your visa to the world,<br><em>from the UAE</em>',
+      subtitle:'Full visa support for UAE residents: USA, Schengen, UK, Japan and beyond. Document check, appointment booking, submission and follow-up until your visa is issued.',
+      cta:'Request your visa', cta2:'Our services',
       s1n:'98%', s1l:'approval rate',
-      s2n:'24-72h', s2l:'processing time',
+      s2n:'50+', s2l:'countries',
       s3n:'15+', s3l:'years experience'
     },
     search: {
-      title:'Check your visa eligibility',
-      subtitle:'Pick visa type, nationality and duration — we will review your case in minutes.',
-      type:'Visa type', type1:'Tourist', type2:'Business', type3:'Residency', type4:'Extension',
-      country:'Nationality', countryPh:'e.g. Egypt',
-      days:'Duration', btn:'Check now',
+      title:'Find the right visa for you',
+      subtitle:'Pick your destination, nationality and package — we will recommend the best option.',
+      dest:'Destination', dest1:'USA', dest2:'Schengen', dest3:'United Kingdom', dest4:'Japan', dest5:'Other',
+      country:'Nationality', countryPh:'e.g. India',
+      package:'Package', pkg1:'Standard', pkg2:'Priority', pkg3:'Urgent', pkg4:'VIP',
+      btn:'Search',
       note:'Your search module goes here. Replace the demo form with your own code.'
     },
     visas: {
-      eyebrow:'UAE visas',
-      title:'Visa services',
-      subtitle:'From document check to delivery — we are with you at every step.',
-      metaTime:'Time', metaType:'Type',
-      v1t:'Tourist visa',     v1d:'Short-term tourist visa for 30 or 60 days.',       v1time:'3-5 days',   v1type:'Tourist',
-      v2t:'Business visa',    v2d:'Visa for business, meetings and conferences.',     v2time:'5-7 days',   v2type:'Business',
-      v3t:'Long-term residency', v3d:'Long-term residency visa for investors.',       v3time:'10-14 days', v3type:'Residency',
-      v4t:'Visa extension',   v4d:'Extend your stay inside the UAE without leaving.', v4time:'2-4 days',   v4type:'Extension',
-      v5t:'Family visa',      v5d:'Visit visa for relatives and friends in the UAE.', v5time:'4-6 days',   v5type:'Family',
-      v6t:'Student visa',     v6d:'Visa for studying at UAE universities.',           v6time:'7-10 days',  v6type:'Student',
-      note:'Exact fees and timelines depend on nationality and visa type — please confirm with our team.'
+      eyebrow:'Visa services',
+      title:'Visa packages',
+      subtitle:'Complete visa packages for UAE residents — USA, Schengen, UK and Japan.',
+      note:'Prices exclude 5% VAT. Exact fees and timelines depend on nationality — please confirm with our team.',
+      vat:'+5% VAT',
+      tiers: {
+        standard:'Standard', priority:'Priority', urgent:'Urgent',
+        premium:'Premium', vip:'VIP', super:'Super priority'
+      },
+      labels: { appointment:'Appointment', processing:'Processing' },
+      usa: {
+        title:'USA visa',
+        p1:{ appt:'within 5 months' }, p2:{ appt:'within 3 months' }, p3:{ appt:'within 2 months' },
+        p4:{ appt:'within 3 weeks' }, p5:{ appt:'within 1-2 weeks' }
+      },
+      schengen: {
+        title:'Schengen visa',
+        processing:'2-3 weeks',
+        p1:{ appt:'within 2 months' }, p2:{ appt:'within 1 month' },
+        p3:{ appt:'within 10-14 days' }, p4:{ appt:'within 2-5 days' }
+      },
+      uk: {
+        title:'UK visa',
+        multiEntry:'multiple entry',
+        durations:{ d6m:'6 months', d2y:'2 years', d5y:'5 years', d10y:'10 years' },
+        p1:{ appt:'within 2 weeks', processing:'15-20 business days' },
+        p2:{ appt:'within 5 business days', processing:'3-5 business days' },
+        p3:{ appt:'within 1-2 business days', processing:'24-48 hours' }
+      },
+      japan: {
+        title:'Japan visa',
+        p1:{ appt:'within 1-2 months', processing:'8-10 business days' },
+        p2:{ appt:'within 1-2 weeks', processing:'8-10 business days' },
+        note1:'💳 Consular fee of 80 AED for a single-entry visa is paid separately at the Japanese consulate or embassy.',
+        note2:'💳 Additional: clients pay the urgent visa assistance and consular fees of 928 AED directly at the visa centre.'
+      }
     },
     services: {
-      eyebrow:'UAE tours',
-      title:'Our other services',
-      subtitle:'Once your visa is ready — discover the Emirates with us.',
-      s1t:'Dubai tours',     s1d:'Burj Khalifa, Dubai Mall, Palm Jumeirah and the old souk.',
-      s2t:'Abu Dhabi tours', s2d:'Sheikh Zayed Mosque, Emirates Palace and Yas Island.',
-      s3t:'Desert safari',   s3d:'Dune bashing, camel riding and Bedouin dinner.',
-      s4t:'Sea trips',       s4d:'Yacht and boat tours in Gulf waters.',
-      s5t:'Airport transfer', s5d:'Private pick-up and drop-off at all airports.',
-      s6t:'Hotel booking',   s6d:'3- to 7-star hotels at preferential rates.'
+      eyebrow:'Travel services',
+      title:'Services for residents',
+      subtitle:'Once your visa is ready — we help arrange the whole trip.',
+      s1t:'Travel packages',       s1d:'Europe, Asia, America — ready-made tours for every budget.',
+      s2t:'Flight booking',        s2d:'Great fares and flexible routes worldwide.',
+      s3t:'Hotel booking',         s3d:'From city boutiques to 5★ resorts at the best rates.',
+      s4t:'Travel insurance',      s4d:'Medical and baggage policies accepted by embassies.',
+      s5t:'Transfers',             s5d:'Airport pick-up and car hire with a driver.',
+      s6t:'Corporate travel',      s6d:'Business trips, conferences and group travel — turnkey.'
     },
     why: {
       eyebrow:'Our advantages',
       title:'Why Urban Gulf',
       subtitle:'Visa expertise, transparent pricing, and follow-up to the end.',
-      w1t:'15+ years of experience', w1d:'A team specialised in UAE immigration law.',
+      w1t:'15+ years of experience', w1d:'A team that knows the requirements of embassies worldwide.',
       w2t:'98% approval rate',       w2d:'Careful document review before submission.',
-      w3t:'Fast processing',         w3d:'From 24 to 72 hours depending on visa type.',
+      w3t:'Focused on residents',    w3d:'We work with UAE residents every day.',
       w4t:'Transparent pricing',     w4d:'No hidden fees — final price before we start.',
       w5t:'Multilingual support',    w5d:'Arabic, English, Chinese, Russian.',
       w6t:'Full follow-up',          w6d:'From first consultation to visa collection.'
     },
     reviews: {
       eyebrow:'Reviews',
-      title:'What our clients say',
-      subtitle:'Over 5,000 visas successfully issued.',
-      r1t:'“I got my UAE tourist visa in just 3 days. Professional service and a great team.”',
-      r1a:'Ahmed, Riyadh',
-      r2t:'“They helped with a residency visa for my Dubai company. Everything was clear and fast.”',
-      r2a:'Layla, Cairo',
-      r3t:'“Got a student visa for my son in a week. Thank you for the constant follow-up.”',
-      r3a:'Zhang, Beijing'
+      title:'What UAE residents say',
+      subtitle:'Over 5,000 visas issued to residents.',
+      r1t:'“I got my Schengen visa in Dubai in 3 weeks. They helped me at every step — from documents to appointment.”', r1a:'Anna, Dubai',
+      r2t:'“Two-year UK visa for my family — clear and fast. Thank you for the follow-up.”', r2a:'Ahmed, Sharjah',
+      r3t:'“Japan visas for my parents in 3 weeks. Truly professional service.”', r3a:'Li Wei, Abu Dhabi'
     },
     contacts: {
       eyebrow:'Contacts',
       title:'Get in touch',
-      subtitle:'Tell us what you need — we reply within one business hour.',
+      subtitle:'Tell us about your travel plans — we reply within one business hour.',
       phoneL:'Phone', emailL:'Email', addrL:'Address', hoursL:'Working hours',
       addrV:'Dubai, Business Bay, Gate Tower, Floor 12',
       hoursV:'Mon–Thu: 9:00–18:00, Fri: 9:00–12:00, Sat–Sun: closed',
       name:'Name', namePh:'How should we address you?',
       emailPh:'you@example.com',
-      msg:'Message', msgPh:'What visa do you need?',
+      msg:'Message', msgPh:'Where are you planning to travel?',
       send:'Send request'
     },
     footer: {
       navTitle:'Navigation', contactTitle:'Contacts', followTitle:'Follow us',
-      desc:'Agency specialised in UAE visas and travel.',
+      desc:'Visa and travel agency for UAE residents.',
       rights:'All rights reserved.',
       made:'Made with love for travel'
     }
@@ -2089,83 +1603,106 @@ const translations = {
     nav: { home:'首页', visas:'签证', services:'服务', why:'为什么选择我们', reviews:'客户评价', contacts:'联系我们' },
     common: { learn:'详情' },
     hero: {
-      badge:'阿联酋签证 · 旅游 · 居留',
-      title:'阿联酋签证<br><em>化繁为简</em>',
-      subtitle:'阿联酋全面签证支持：旅游签、商务签、居留签与续签。材料审核、递交、跟进直至出签。',
-      cta:'申请签证', cta2:'阿联酋行程',
+      badge:'签证 · 旅行 · 阿联酋居民专享',
+      title:'从阿联酋出发<br><em>畅游世界</em>',
+      subtitle:'为阿联酋居民提供全方位签证支持：美国、申根、英国、日本及更多目的地。材料审核、预约、递交及全程跟进直至出签。',
+      cta:'申请签证', cta2:'我们的服务',
       s1n:'98%', s1l:'通过率',
-      s2n:'24-72h', s2l:'办理时长',
+      s2n:'50+', s2l:'个国家',
       s3n:'15+', s3l:'年经验'
     },
     search: {
-      title:'检查您的签证资格',
-      subtitle:'选择签证类型、国籍和停留时长 — 我们将在几分钟内评估您的情况。',
-      type:'签证类型', type1:'旅游', type2:'商务', type3:'居留', type4:'续签',
-      country:'国籍', countryPh:'例如：埃及',
-      days:'时长', btn:'立即查询',
+      title:'找到适合您的签证',
+      subtitle:'选择目的地、国籍和套餐 — 我们将为您推荐最佳方案。',
+      dest:'目的地', dest1:'美国', dest2:'申根', dest3:'英国', dest4:'日本', dest5:'其他',
+      country:'国籍', countryPh:'例如：印度',
+      package:'套餐', pkg1:'标准', pkg2:'优先', pkg3:'加急', pkg4:'VIP',
+      btn:'搜索',
       note:'此处放置您的搜索模块，请用您自己的代码替换演示表单。'
     },
     visas: {
-      eyebrow:'阿联酋签证',
-      title:'签证服务',
-      subtitle:'从材料审核到交付 — 我们全程陪同。',
-      metaTime:'时长', metaType:'类型',
-      v1t:'旅游签证',   v1d:'30 或 60 天短期旅游签证。',            v1time:'3-5天',   v1type:'旅游',
-      v2t:'商务签证',   v2d:'用于商务、会议和洽谈的签证。',          v2time:'5-7天',   v2type:'商务',
-      v3t:'长期居留',   v3d:'面向投资者和企业主的长期居留签证。',    v3time:'10-14天', v3type:'居留',
-      v4t:'签证续签',   v4d:'无需离境即可在阿联酋境内续签。',        v4time:'2-4天',   v4type:'续签',
-      v5t:'探亲签证',   v5d:'赴阿联酋探访亲友的签证。',              v5time:'4-6天',   v5type:'探亲',
-      v6t:'学生签证',   v6d:'赴阿联酋大学就读的学生签证。',          v6time:'7-10天',  v6type:'学生',
-      note:'具体费用和时长取决于国籍和签证类型 — 请与我们的团队确认。'
+      eyebrow:'签证服务',
+      title:'签证套餐',
+      subtitle:'为阿联酋居民提供一站式签证套餐 — 美国、申根、英国和日本。',
+      note:'价格不含 5% 增值税。具体费用和时长取决于国籍 — 请与我们的团队确认。',
+      vat:'+5% 增值税',
+      tiers: {
+        standard:'标准', priority:'优先', urgent:'加急',
+        premium:'尊享', vip:'VIP', super:'超级优先'
+      },
+      labels: { appointment:'预约', processing:'审理' },
+      usa: {
+        title:'美国签证',
+        p1:{ appt:'5 个月内' }, p2:{ appt:'3 个月内' }, p3:{ appt:'2 个月内' },
+        p4:{ appt:'3 周内' }, p5:{ appt:'1-2 周内' }
+      },
+      schengen: {
+        title:'申根签证',
+        processing:'2-3 周',
+        p1:{ appt:'2 个月内' }, p2:{ appt:'1 个月内' },
+        p3:{ appt:'10-14 天内' }, p4:{ appt:'2-5 天内' }
+      },
+      uk: {
+        title:'英国签证',
+        multiEntry:'多次入境',
+        durations:{ d6m:'6 个月', d2y:'2 年', d5y:'5 年', d10y:'10 年' },
+        p1:{ appt:'2 周内', processing:'15-20 个工作日' },
+        p2:{ appt:'5 个工作日内', processing:'3-5 个工作日' },
+        p3:{ appt:'1-2 个工作日内', processing:'24-48 小时' }
+      },
+      japan: {
+        title:'日本签证',
+        p1:{ appt:'1-2 个月内', processing:'8-10 个工作日' },
+        p2:{ appt:'1-2 周内', processing:'8-10 个工作日' },
+        note1:'💳 单次入境签证的领事费 80 迪拉姆，需在日本领事馆或大使馆单独支付。',
+        note2:'💳 附加：客户需在签证中心直接支付加急签证服务费和 928 迪拉姆的领事费。'
+      }
     },
     services: {
-      eyebrow:'阿联酋行程',
-      title:'我们的其他服务',
-      subtitle:'签证办妥后 — 与我们一起探索阿联酋。',
-      s1t:'迪拜观光',      s1d:'哈利法塔、迪拜购物中心、朱美拉棕榈岛和老集市。',
-      s2t:'阿布扎比观光',  s2d:'谢赫扎耶德清真寺、酋长皇宫酒店和亚斯岛。',
-      s3t:'沙漠探险',      s3d:'冲沙、骑骆驼和贝都因晚餐。',
-      s4t:'海上行程',      s4d:'海湾水域的游艇与船只观光。',
-      s5t:'机场接送',      s5d:'覆盖所有机场的私人接送服务。',
-      s6t:'酒店预订',      s6d:'3 至 7 星级酒店，优惠价格。'
+      eyebrow:'旅行服务',
+      title:'居民专属服务',
+      subtitle:'签证办妥后 — 我们帮您安排整趟旅程。',
+      s1t:'旅游套餐',           s1d:'欧洲、亚洲、美洲 — 覆盖各种预算的成熟行程。',
+      s2t:'机票预订',           s2d:'全球优惠票价与灵活航线。',
+      s3t:'酒店预订',           s3d:'从城市精品酒店到 5★ 度假村，最优价格。',
+      s4t:'旅行保险',           s4d:'符合使馆要求的医疗与行李保险。',
+      s5t:'接送服务',           s5d:'机场接送及带司机的租车服务。',
+      s6t:'商务出行',           s6d:'差旅、会议、团体出行 — 一站式服务。'
     },
     why: {
       eyebrow:'我们的优势',
       title:'为什么选择 Urban Gulf',
       subtitle:'签证专业、价格透明、全程跟进。',
-      w1t:'15年以上经验',   w1d:'专精阿联酋移民法规的团队。',
-      w2t:'98% 通过率',     w2d:'递交前进行严格的材料审核。',
-      w3t:'快速办理',       w3d:'视签证类型 24 至 72 小时。',
-      w4t:'价格透明',       w4d:'无隐藏费用 — 开始前即确定最终价格。',
-      w5t:'多语言支持',     w5d:'阿拉伯语、英语、中文、俄语。',
-      w6t:'全程跟进',       w6d:'从首次咨询到领取签证。'
+      w1t:'15年以上经验',       w1d:'熟悉各国使馆要求的专业团队。',
+      w2t:'98% 通过率',         w2d:'递交前进行严格的材料审核。',
+      w3t:'专注居民客户',       w3d:'每天都在服务阿联酋居民。',
+      w4t:'价格透明',           w4d:'无隐藏费用 — 开始前即确定最终价格。',
+      w5t:'多语言支持',         w5d:'阿拉伯语、英语、中文、俄语。',
+      w6t:'全程跟进',           w6d:'从首次咨询到领取签证。'
     },
     reviews: {
       eyebrow:'客户评价',
-      title:'客户怎么说',
-      subtitle:'已成功签发超过 5,000 份签证。',
-      r1t:'“我只用了3天就拿到了阿联酋旅游签证。专业且贴心的团队。”',
-      r1a:'艾哈迈德，利雅得',
-      r2t:'“他们帮我的迪拜公司办好了居留签证。一切清晰高效。”',
-      r2a:'莱拉，开罗',
-      r3t:'“一周内帮我儿子办好了学生签证。感谢持续的跟进。”',
-      r3a:'张先生，北京'
+      title:'阿联酋居民怎么说',
+      subtitle:'已为居民成功签发超过 5,000 份签证。',
+      r1t:'“在迪拜3周内拿到申根签证。从材料到预约，每一步都帮我搞定。”', r1a:'安娜，迪拜',
+      r2t:'“帮我全家办了两年英国签证 — 清晰高效。感谢跟进。”', r2a:'艾哈迈德，沙迦',
+      r3t:'“3周内为父母办好日本签证。真正的专业服务。”', r3a:'李伟，阿布扎比'
     },
     contacts: {
       eyebrow:'联系方式',
       title:'联系我们',
-      subtitle:'告诉我们您的需求 — 我们会在一个工作小时内回复。',
+      subtitle:'告诉我们您的出行计划 — 我们会在一个工作小时内回复。',
       phoneL:'电话', emailL:'邮箱', addrL:'地址', hoursL:'工作时间',
       addrV:'迪拜商业湾 Gate Tower 12 层',
       hoursV:'周一至周四：9:00–18:00，周五：9:00–12:00，周六至周日：休息',
       name:'姓名', namePh:'我们该如何称呼您？',
       emailPh:'you@example.com',
-      msg:'留言', msgPh:'您需要哪种签证？',
+      msg:'留言', msgPh:'您计划去哪里旅行？',
       send:'提交申请'
     },
     footer: {
       navTitle:'导航', contactTitle:'联系方式', followTitle:'关注我们',
-      desc:'专注阿联酋签证与旅游的代理机构。',
+      desc:'面向阿联酋居民的签证与旅行代理机构。',
       rights:'版权所有。',
       made:'用心打造，热爱旅行'
     }
@@ -2176,100 +1713,120 @@ const translations = {
     nav: { home:'Главная', visas:'Визы', services:'Услуги', why:'Почему мы', reviews:'Отзывы', contacts:'Контакты' },
     common: { learn:'Подробнее' },
     hero: {
-      badge:'Визы ОАЭ · Туризм · Резидентство',
-      title:'Виза в ОАЭ,<br><em>без сложностей</em>',
-      subtitle:'Полная визовая поддержка по ОАЭ: туристические, бизнес, резидентские визы и продление. Проверка документов, подача и сопровождение до выдачи.',
-      cta:'Запросить визу', cta2:'Туры по ОАЭ',
+      badge:'Визы · Путешествия · для резидентов ОАЭ',
+      title:'Ваша виза в любую страну,<br><em>из ОАЭ</em>',
+      subtitle:'Полное визовое сопровождение для резидентов ОАЭ: США, Шенген, Великобритания, Япония и другие направления. Проверка документов, запись, подача и сопровождение до получения визы.',
+      cta:'Получить визу', cta2:'Наши услуги',
       s1n:'98%', s1l:'одобрений',
-      s2n:'24-72ч', s2l:'срок обработки',
+      s2n:'50+', s2l:'стран',
       s3n:'15+', s3l:'лет опыта'
     },
     search: {
-      title:'Проверьте право на визу',
-      subtitle:'Выберите тип визы, гражданство и срок пребывания — мы оценим вашу ситуацию за пару минут.',
-      type:'Тип визы', type1:'Туристическая', type2:'Бизнес', type3:'Резидентская', type4:'Продление',
-      country:'Гражданство', countryPh:'например, Египет',
-      days:'Срок', btn:'Проверить',
+      title:'Подберите визу для поездки',
+      subtitle:'Выберите страну назначения, гражданство и пакет — мы подскажем оптимальный вариант.',
+      dest:'Направление', dest1:'США', dest2:'Шенген', dest3:'Великобритания', dest4:'Япония', dest5:'Другое',
+      country:'Гражданство', countryPh:'например, Индия',
+      package:'Пакет', pkg1:'Стандарт', pkg2:'Приоритет', pkg3:'Срочно', pkg4:'VIP',
+      btn:'Подобрать',
       note:'Здесь размещается ваш модуль поиска. Замените демо-форму своим кодом.'
     },
     visas: {
-      eyebrow:'Визы ОАЭ',
-      title:'Визовые услуги',
-      subtitle:'От проверки документов до получения — мы рядом на каждом шаге.',
-      metaTime:'Срок', metaType:'Тип',
-      v1t:'Туристическая виза',  v1d:'Краткосрочная туристическая виза на 30 или 60 дней.', v1time:'3-5 дней',   v1type:'Туристическая',
-      v2t:'Бизнес-виза',         v2d:'Виза для деловых поездок, встреч и конференций.',      v2time:'5-7 дней',   v2type:'Бизнес',
-      v3t:'Долгосрочное резидентство', v3d:'Резидентская виза для инвесторов и предпринимателей.', v3time:'10-14 дней', v3type:'Резидентская',
-      v4t:'Продление визы',      v4d:'Продление пребывания в ОАЭ без выезда из страны.',       v4time:'2-4 дня',    v4type:'Продление',
-      v5t:'Семейная виза',       v5d:'Гостевая виза для родственников и друзей в ОАЭ.',        v5time:'4-6 дней',   v5type:'Семейная',
-      v6t:'Студенческая виза',   v6d:'Виза для обучения в университетах ОАЭ.',                 v6time:'7-10 дней',  v6type:'Студенческая',
-      note:'Точные сроки и стоимость зависят от гражданства и типа визы — уточняйте у нашей команды.'
+      eyebrow:'Визовые услуги',
+      title:'Визовые пакеты',
+      subtitle:'Полные визовые пакеты для резидентов ОАЭ — США, Шенген, Великобритания и Япония.',
+      note:'Цены указаны без НДС 5%. Точные сроки и стоимость зависят от гражданства — уточняйте у нашей команды.',
+      vat:'+5% НДС',
+      tiers: {
+        standard:'Стандарт', priority:'Приоритет', urgent:'Срочно',
+        premium:'Премиум', vip:'VIP', super:'Супер-приоритет'
+      },
+      labels: { appointment:'Запись', processing:'Рассмотрение' },
+      usa: {
+        title:'Виза в США',
+        p1:{ appt:'в течение 5 месяцев' }, p2:{ appt:'в течение 3 месяцев' }, p3:{ appt:'в течение 2 месяцев' },
+        p4:{ appt:'в течение 3 недель' }, p5:{ appt:'в течение 1-2 недель' }
+      },
+      schengen: {
+        title:'Шенгенская виза',
+        processing:'2-3 недели',
+        p1:{ appt:'в течение 2 месяцев' }, p2:{ appt:'в течение 1 месяца' },
+        p3:{ appt:'в течение 10-14 дней' }, p4:{ appt:'в течение 2-5 дней' }
+      },
+      uk: {
+        title:'Виза в Великобританию',
+        multiEntry:'многократный въезд',
+        durations:{ d6m:'6 месяцев', d2y:'2 года', d5y:'5 лет', d10y:'10 лет' },
+        p1:{ appt:'в течение 2 недель', processing:'15-20 рабочих дней' },
+        p2:{ appt:'в течение 5 рабочих дней', processing:'3-5 рабочих дней' },
+        p3:{ appt:'в течение 1-2 рабочих дней', processing:'24-48 часов' }
+      },
+      japan: {
+        title:'Виза в Японию',
+        p1:{ appt:'в течение 1-2 месяцев', processing:'8-10 рабочих дней' },
+        p2:{ appt:'в течение 1-2 недель', processing:'8-10 рабочих дней' },
+        note1:'💳 Консульский сбор 80 AED за однократную визу оплачивается отдельно в консульстве или посольстве Японии.',
+        note2:'💳 Дополнительно: клиенты оплачивают срочную визовую помощь и консульские сборы 928 AED непосредственно в визовом центре.'
+      }
     },
     services: {
-      eyebrow:'Туры по ОАЭ',
-      title:'Наши другие услуги',
-      subtitle:'Когда виза готова — откройте Эмираты вместе с нами.',
-      s1t:'Экскурсии по Дубаю',   s1d:'Бурдж-Халифа, Dubai Mall, Palm Jumeirah и старый рынок.',
-      s2t:'Экскурсии по Абу-Даби', s2d:'Мечеть шейха Зайда, Emirates Palace и Yas Island.',
-      s3t:'Сафари в пустыне',     s3d:'Дюнные гонки, катание на верблюдах и бедуинский ужин.',
-      s4t:'Морские прогулки',     s4d:'Прогулки на яхтах и катерах в водах Залива.',
-      s5t:'Трансфер из аэропорта', s5d:'Индивидуальный трансфер в любой аэропорт и обратно.',
-      s6t:'Бронирование отелей',  s6d:'Отели от 3 до 7 звёзд по выгодным ценам.'
+      eyebrow:'Туристические услуги',
+      title:'Сервисы для резидентов',
+      subtitle:'Когда виза готова — поможем организовать всю поездку.',
+      s1t:'Туристические пакеты',      s1d:'Европа, Азия, Америка — готовые туры под любой бюджет.',
+      s2t:'Авиабилеты',                s2d:'Выгодные тарифы и гибкие маршруты по всему миру.',
+      s3t:'Бронирование отелей',       s3d:'От городских бутиков до курортов 5★ по лучшим ценам.',
+      s4t:'Страхование путешествий',   s4d:'Медицинские и багажные полисы, принимаемые посольствами.',
+      s5t:'Трансферы',                 s5d:'Встреча в аэропорту и аренда авто с водителем.',
+      s6t:'Корпоративные поездки',     s6d:'Командировки, конференции и групповые выезды «под ключ».'
     },
     why: {
       eyebrow:'Наши преимущества',
       title:'Почему Urban Gulf',
       subtitle:'Визовая экспертиза, прозрачные цены и сопровождение до конца.',
-      w1t:'Опыт 15+ лет',         w1d:'Команда, специализирующаяся на иммиграционном праве ОАЭ.',
-      w2t:'98% одобрений',        w2d:'Тщательная проверка документов до подачи.',
-      w3t:'Быстрая обработка',    w3d:'От 24 до 72 часов в зависимости от типа визы.',
-      w4t:'Прозрачные цены',      w4d:'Без скрытых платежей — финальная цена до старта.',
-      w5t:'Поддержка на 4 языках', w5d:'Арабский, английский, китайский, русский.',
-      w6t:'Полное сопровождение', w6d:'От первой консультации до получения визы.'
+      w1t:'Опыт 15+ лет',              w1d:'Команда, знающая требования посольств разных стран.',
+      w2t:'98% одобрений',             w2d:'Тщательная проверка документов до подачи.',
+      w3t:'Фокус на резидентах',       w3d:'Ежедневно работаем с резидентами ОАЭ.',
+      w4t:'Прозрачные цены',           w4d:'Без скрытых платежей — финальная цена до старта.',
+      w5t:'Поддержка на 4 языках',     w5d:'Арабский, английский, китайский, русский.',
+      w6t:'Полное сопровождение',      w6d:'От первой консультации до получения визы.'
     },
     reviews: {
       eyebrow:'Отзывы',
-      title:'Что говорят клиенты',
-      subtitle:'Более 5000 успешно выданных виз.',
-      r1t:'«Получил туристическую визу в ОАЭ всего за 3 дня. Профессиональный сервис и отличная команда.»',
-      r1a:'Ахмед, Эр-Рияд',
-      r2t:'«Помогли с резидентской визой для моей компании в Дубае. Всё чётко и быстро.»',
-      r2a:'Лейла, Каир',
-      r3t:'«Оформили студенческую визу для сына за неделю. Спасибо за постоянное сопровождение.»',
-      r3a:'Чжан, Пекин'
+      title:'Что говорят резиденты ОАЭ',
+      subtitle:'Более 5000 виз, оформленных для резидентов.',
+      r1t:'«Оформила шенгенскую визу в Дубае за 3 недели. Помогли на каждом шаге — от документов до записи.»', r1a:'Анна, Дубай',
+      r2t:'«Британская виза на 2 года для всей семьи — всё чётко и быстро. Спасибо за сопровождение.»', r2a:'Ахмед, Шарджа',
+      r3t:'«Японская виза для родителей за 3 недели. По-настоящему профессиональный сервис.»', r3a:'Ли Вэй, Абу-Даби'
     },
     contacts: {
       eyebrow:'Контакты',
       title:'Свяжитесь с нами',
-      subtitle:'Расскажите, что нужно — ответим в течение рабочего часа.',
+      subtitle:'Расскажите о планах поездки — ответим в течение рабочего часа.',
       phoneL:'Телефон', emailL:'E-mail', addrL:'Адрес', hoursL:'Часы работы',
       addrV:'Дубай, Business Bay, Gate Tower, 12 этаж',
       hoursV:'Пн–Чт: 9:00–18:00, Пт: 9:00–12:00, Сб–Вс: закрыто',
       name:'Имя', namePh:'Как к вам обращаться?',
       emailPh:'you@example.com',
-      msg:'Сообщение', msgPh:'Какая виза вам нужна?',
+      msg:'Сообщение', msgPh:'Куда планируете поехать?',
       send:'Отправить заявку'
     },
     footer: {
       navTitle:'Навигация', contactTitle:'Контакты', followTitle:'Мы в соцсетях',
-      desc:'Агентство, специализирующееся на визах и турах в ОАЭ.',
+      desc:'Визовое и туристическое агентство для резидентов ОАЭ.',
       rights:'Все права защищены.',
       made:'Сделано с любовью к путешествиям'
     }
   }
 };
-
 function getByPath(obj, path){
   return path.split('.').reduce((acc, key) => (acc && acc[key] !== undefined) ? acc[key] : undefined, obj);
 }
 
 function setLanguage(lang){
   const dict = translations[lang] || translations.ar;
-
   document.documentElement.lang = lang;
   document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 
-  // Тексты (с поддержкой innerHTML, если есть <br> или <em>)
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const val = getByPath(dict, el.dataset.i18n);
     if (val === undefined) return;
@@ -2294,16 +1851,12 @@ function setLanguage(lang){
 (function initLanguage(){
   let saved = null;
   try { saved = localStorage.getItem('Urban Gulf-lang'); } catch(e){}
-
   const browserLang = (navigator.language || 'ar').slice(0,2).toLowerCase();
   const supported = ['ar','en','zh','ru'];
-
   const initial = saved && supported.includes(saved)
     ? saved
     : (supported.includes(browserLang) ? browserLang : 'ar');
-
   setLanguage(initial);
-
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
@@ -2313,25 +1866,20 @@ function setLanguage(lang){
   const burger = document.getElementById('burger');
   const nav = document.getElementById('mainNav');
   if (!burger || !nav) return;
-
   const close = () => {
     nav.classList.remove('open');
     burger.classList.remove('open');
     burger.setAttribute('aria-expanded', 'false');
   };
-
   burger.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     burger.classList.toggle('open', isOpen);
     burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
-
   nav.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
-
   document.addEventListener('click', e => {
     if (!nav.contains(e.target) && !burger.contains(e.target)) close();
   });
-
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') close();
   });
